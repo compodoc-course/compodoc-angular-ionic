@@ -1,6 +1,6 @@
 {
   "name": "starter-bootstrap-admin-angular6",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,7 +20,10 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
+    "i18n-config": "^1.0.3",
+    "ng2-charts": "^1.6.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
