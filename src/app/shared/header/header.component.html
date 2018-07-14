@@ -6,13 +6,6 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <app-sidebar></app-sidebar>
-    <ul class="navbar-nav sidenav-toggler">
-      <li class="nav-item">
-        <a class="nav-link text-center" id="sidenavToggler">
-          <i class="fa fa-fw fa-angle-left"></i>
-        </a>
-      </li>
-    </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -106,7 +99,7 @@
         </form>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+        <a class="nav-link" data-toggle="modal" routerLink="/login">
           <i class="fa fa-fw fa-sign-out"></i>Logout</a>
       </li>
     </ul>
