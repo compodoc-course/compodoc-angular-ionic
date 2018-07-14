@@ -37,3 +37,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+package-lock.json
+package-lock.json
+
+# Others
+/traslate-template-files
