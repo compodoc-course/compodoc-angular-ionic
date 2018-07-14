@@ -1,0 +1,34 @@
+{
+  "accountSettings": {
+    "themes": {
+        "title": "Temas",
+        "withLightSidebar": "Con el sidebar claro",
+        "withBlackSidebar": "Con el sidebar oscuro"
+    }
+  },
+  "common": {
+    "email": "Correo electrónico",
+    "name": "Nombre",
+    "password": "Contraseña"
+  },
+  "login": {
+    "dontAccount": "¿Aun no tienes cuenta?",
+    "forgotPass": "¿Contraseña olvidada?",
+    "register": "Registrate",
+    "rememberMe": "Recordarme",
+    "start": "Iniciar sesión",
+    "username": "Usuario",
+    "withGoogle": "Iniciar sesión con Google",
+    "withFacebook": "Iniciar sesión con Facebook"
+  },
+  "menus": {},
+  "register": {
+    "accept": "Estoy de acuerdo con todos los ",
+    "alreadyAccount": "¿Ya tienes una cuenta de usuario?",
+    "createAndEntry": "Crea tu cuenta de usuario y adelante",
+    "confirmPassword": "Confirmar password",
+    "execute": "Registrarse",
+    "now": "Regístrate ya",
+    "terms": "términos"
+  }
+}
