@@ -18,7 +18,6 @@ import { APP_ROUTES } from './app.routes';
     PagesModule,
     LoginModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

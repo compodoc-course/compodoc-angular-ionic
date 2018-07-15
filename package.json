@@ -1,13 +1,14 @@
 {
   "name": "starter-bootstrap-admin-angular6",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prod": "ng build --prod --base-href='./'"
   },
   "private": true,
   "dependencies": {

@@ -11,7 +11,7 @@ import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 // Components
 import { PagesComponent } from './pages.component';
-import { ChartsComponent } from './charts/charts.component';
+import { ChartComponent } from './charts/chart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DoughnutChartComponent } from '../components/charts/doughnut-chart/doughnut-chart.component';
 import { BarChartComponent } from '../components/charts/bar-chart/bar-chart.component';
@@ -22,7 +22,6 @@ import { LineChartComponent } from '../components/charts/line-chart/line-chart.c
 import { TablesComponent } from './tables/tables.component';
 
 const COMPONENTS = [
-  ChartsComponent,
   DashboardComponent,
   LineChartComponent,
   BarChartComponent,
@@ -30,8 +29,11 @@ const COMPONENTS = [
   PieChartComponent,
   RadarChartComponent,
   DoughnutChartComponent,
-  TablesComponent
+  TablesComponent,
+  ChartComponent
 ];
+
+const DECLARATIONS = [...[PagesComponent], ...COMPONENTS];
 
 @NgModule({
   imports: [
@@ -48,7 +50,7 @@ const COMPONENTS = [
       cancelButtonClass: 'btn'
     })
   ],
-  declarations: COMPONENTS.concat([PagesComponent]),
-  exports: COMPONENTS
+  exports: COMPONENTS,
+  declarations: DECLARATIONS
 })
 export class PagesModule {}
