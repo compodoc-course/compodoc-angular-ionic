@@ -1,3 +1,6 @@
-<p>
-  charts works!
-</p>
+<div class="row" *ngIf="graphics">
+  <div class="col-6" *ngFor="let graphic of graphics">
+    <app-doughnut-chart [data]="graphic.data" [labels]="graphic.labels" [legend]="graphic.legend">
+    </app-doughnut-chart>
+  </div>
+</div>
