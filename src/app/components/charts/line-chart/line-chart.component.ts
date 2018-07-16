@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.css']
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() datasets;
+  @Input() labels;
+  @Input() options;
+  @Input() colors;
+  @Input() legend;
+  @Input() chartType;
 }
