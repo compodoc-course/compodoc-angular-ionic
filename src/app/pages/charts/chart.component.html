@@ -1,6 +1,62 @@
-<div class="row" *ngIf="graphics">
-  <div class="col-6" *ngFor="let graphic of graphics">
-    <app-doughnut-chart [data]="graphic.data" [labels]="graphic.labels" [legend]="graphic.legend">
-    </app-doughnut-chart>
+
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-chart-pie"></i> Doughnut Chart Examples
+  </div>
+  <div class="card-body" *ngIf="graphics">
+    <div class="row">
+    <ng-template  ngFor let-graphic [ngForOf]="graphics" let-i="index">
+        <div class="col-lg-6">
+          <app-doughnut-chart [data]="graphic.data" [labels]="graphic.labels" [legend]="graphic.legend">
+          </app-doughnut-chart>
+        </div>
+    </ng-template>
+    </div>
+  </div>
+</div>
+<div class="card mb-3">
+  <div class="card-header">
+      <i class="fas fa-chart-line"></i> Line Data Chart Example
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-md-6">
+            <app-line-chart
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType">
+            </app-line-chart>
+          </div>
+          <div class="col-md-6" style="margin-bottom: 10px">
+            <h4>Precipitations in first six months of 2016, 2017 and 2018</h4>
+            <table class="table table-responsive table-condensed">
+              <tr>
+                <th *ngFor="let label of lineChartLabels">{{label}}</th>
+              </tr>
+              <tr *ngFor="let d of lineChartData">
+                <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+  </div>
+</div>
+<div class="card mb-3">
+  <div class="card-header">
+      <i class="fas fa-chart-bar"></i> &nbsp; Bar chart Data example
+  </div>
+  <div class="card-body">
+      <div>
+          <app-bar-chart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+          ></app-bar-chart>
+      </div>
   </div>
 </div>
