@@ -1,0 +1,79 @@
+:root {
+    /******************/
+    --white-color: white;
+    --background-general: #EEEEEE;
+    --all-background: var(--background-general);
+    --border-general: #ccc;
+    --main-color: #6DA75C;
+    --active-color: rgb(76, 114, 64);
+    --hover-color: rgb(38, 66, 30);
+    --hove-option-color: #ddd;
+    --default-font-family: 'Poppins', sans-serif;
+    --box-shadow-default: 0 1px 1px rgba(0,0,0,.05);
+    --like: #e0245e;
+    --sidebar-white-color: #fff;
+    --bg-color-black-10-op: rgba(82, 114, 71, 0.1);
+    --danger-btn: #dc3545;
+    --no-read-messages: #6da75c66;
+    --border-item-list: #e5e5e5;
+    --badge-text-color: var(--sidebar-white-color);
+    /*** Buttons colors **************/
+    --btn-default-background: #f0f0f0;
+    /****BOOSTRAP V4 ALERTS**********/
+    --alert-primary: #0c5460;
+    --alert-secondary: #383d41;
+    --alert-success: #155724;
+    --alert-danger:#721c24;
+    --alert-warning: #856404;
+    --alert-info: #0c5460;
+    --alert-light: #818182;
+    --alert-dark: #1b1e21;
+}
+
+.fa-1x{
+    font-size:0.8em !important;
+}
+.fa-2x{
+    font-size:1em !important;
+}
+.fa-3x{
+    font-size:1.2em !important;
+}
+.fa-4x{
+    font-size:1.4em !important;
+}
+.fa-5x{
+    font-size:1.6em !important;
+}
+.fa-mycustomx{
+    font-size:3.2em !important;
+}
+
+#ui-datepicker-div {
+    z-index: 1051 !important;
+}
+
+i.no-active {
+    color: red;
+}
+
+i.active {
+    color: green;
+}
+
+.number {
+    font-size: 20px;
+    color: green;
+}
+
+#btn-add-plan-user {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-left: 15px;
+    font-size: 20px;
+}
