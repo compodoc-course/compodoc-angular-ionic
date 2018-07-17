@@ -1,8 +1,14 @@
 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+  <li class="nav-item" [attr.routerLinkActive]="m.route != '' ? 'active': 'active-link'" [routerLink]="m.route" *ngFor="let m of _sidebar.menu; let i = index;" data-toggle="tooltip" data-placement="right" [title]="m.title">
+      <a class="nav-link">
+        <i class="{{ m.icon }}"></i>
+        <span class="nav-link-text">&nbsp;{{ m.title }}</span>
+      </a>
+  </li>
   <li class="nav-item" routerLinkActive="active" routerLink="/dashboard" data-toggle="tooltip" data-placement="right" title="Dashboard">
     <a class="nav-link">
       <i class="fas fa-tachometer-alt"></i>
-      <span class="nav-link-text">&nbsp;Dashboard</span>
+      <span class="nav-link-text">&nbsp;Dashboard {{ _sidebar.menu.length }}</span>
     </a>
   </li>
   <li class="nav-item" routerLinkActive="active" routerLink="/charts" data-toggle="tooltip" data-placement="right" title="Charts">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   findClassToggled = 'sidenav-toggled';
-  constructor() {}
+  constructor( private _sidebar: SidebarService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this._sidebar.menu.length);
+    console.log(this._sidebar.menu);
+  }
 
   // sidenav-toggled
 
