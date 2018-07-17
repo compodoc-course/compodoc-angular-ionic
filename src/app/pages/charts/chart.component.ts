@@ -75,7 +75,7 @@ export class ChartComponent {
   public lineChartLegend = true;
   public lineChartType = 'line';
 
-  // Base chart
+  // Bar chart
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -89,4 +89,10 @@ export class ChartComponent {
     {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
   ];
 
+  // Pie Chart
+  // Pie
+  public pieChartLabels: string[] = ['Blue', 'Red', 'Yellow', 'Green', 'Ok'];
+  public pieChartData: any[] =  [12.21, 15.58, 11.25, 8.32, 39];
+  public pieChartColors = ['#007bff', '#dc3545', '#ffc107', '#28a745'];
+  public pieChartType = 'pie';
 }

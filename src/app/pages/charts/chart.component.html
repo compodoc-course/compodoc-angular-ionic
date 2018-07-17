@@ -60,3 +60,25 @@
       </div>
   </div>
 </div>
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-chart-pie"></i> &nbsp; Pie Chart
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-6">
+        
+        <app-pie-chart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="'pie'"
+          ></app-pie-chart>
+      </div>
+      <div class="col-lg-6">
+        
+      </div>
+    </div>
+  </div>
+</div>
