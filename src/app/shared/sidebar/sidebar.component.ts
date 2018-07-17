@@ -6,13 +6,19 @@ import { SidebarService } from '../../services/sidebar.service';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   findClassToggled = 'sidenav-toggled';
-  constructor( private _sidebar: SidebarService) {}
-
-  ngOnInit() {
-    console.log(this._sidebar.menu.length);
-    console.log(this._sidebar.menu);
+  toggledSideNav: boolean;
+  constructor( public _sidebar: SidebarService) {
+    if (localStorage.getItem('toggleSideNav') === '1') {
+      document
+        .getElementById('page-top')
+        .classList.add(this.findClassToggled);
+    } else {
+      document
+        .getElementById('page-top')
+        .classList.remove(this.findClassToggled);
+    }
   }
 
   // sidenav-toggled
@@ -26,11 +32,12 @@ export class SidebarComponent implements OnInit {
     if (find !== undefined) {
       // remove
       find.classList.remove(this.findClassToggled);
+      localStorage.setItem('toggleSideNav', '0');
     } else {
       const takePageTopId = document.getElementById('page-top');
       // add
       takePageTopId.classList.add(this.findClassToggled);
+      localStorage.setItem('toggleSideNav', '1');
     }
-    console.log('click');
   }
 }

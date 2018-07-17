@@ -1,11 +1,20 @@
 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
   <li class="nav-item"  *ngFor="let m of _sidebar.menu; let i = index;" data-toggle="tooltip" data-placement="right" [title]="m.title">
-      <a routerLinkActive="active" routerLink="/{{m.route}}" class="nav-link">
+      <a *ngIf="m.route != '*'" routerLinkActive="active" [routerLink]="m.route" class="nav-link">
         <i class="{{ m.icon }}"></i>
-        <span class="nav-link-text">&nbsp;{{ m.title }}</span>
+        <span class="nav-link-text">&nbsp;&nbsp;{{ m.title }}</span>
       </a>
+      <a *ngIf="m.route == '*'" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents{{m.title}}" data-parent="#exampleAccordion">
+        <i class="{{ m.icon }}"></i>
+        <span class="nav-link-text">&nbsp;&nbsp;{{ m.title }}</span>
+      </a>
+      <ul class="sidenav-second-level collapse" id="collapseComponents{{m.title}}">
+        <li *ngFor="let sub of m.submenu">
+          <a href="navbar.html">&nbsp;{{ sub.title }}</a>
+        </li>
+      </ul>
   </li>
-  <li class="nav-item" routerLinkActive="active" routerLink="/dashboard" data-toggle="tooltip" data-placement="right" title="Dashboard">
+  <!--<li class="nav-item" routerLinkActive="active" routerLink="/dashboard" data-toggle="tooltip" data-placement="right" title="Dashboard">
     <a class="nav-link">
       <i class="fas fa-tachometer-alt"></i>
       <span class="nav-link-text">&nbsp;Dashboard {{ _sidebar.menu.length }}</span>
@@ -93,7 +102,7 @@
       <i class="fa fa-fw fa-link"></i>
       <span class="nav-link-text">Link</span>
     </a>
-  </li>
+  </li>-->
 </ul>
 <ul class="navbar-nav sidenav-toggler">
   <li class="nav-item">
