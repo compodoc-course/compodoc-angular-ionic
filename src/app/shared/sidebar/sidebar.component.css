@@ -3,3 +3,8 @@
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
+
+.active {
+    color: #fff;
+    background: #495057 !important;
+}

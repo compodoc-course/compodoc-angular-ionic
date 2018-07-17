@@ -1,6 +1,6 @@
 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-  <li class="nav-item" [attr.routerLinkActive]="m.route != '' ? 'active': 'active-link'" [routerLink]="m.route" *ngFor="let m of _sidebar.menu; let i = index;" data-toggle="tooltip" data-placement="right" [title]="m.title">
-      <a class="nav-link">
+  <li class="nav-item"  *ngFor="let m of _sidebar.menu; let i = index;" data-toggle="tooltip" data-placement="right" [title]="m.title">
+      <a routerLinkActive="active" routerLink="/{{m.route}}" class="nav-link">
         <i class="{{ m.icon }}"></i>
         <span class="nav-link-text">&nbsp;{{ m.title }}</span>
       </a>

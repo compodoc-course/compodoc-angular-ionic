@@ -8,17 +8,17 @@ export class SidebarService {
     {
       title: 'Dashboard',
       icon: 'fas fa-tachometer-alt',
-      route: '/dashboard'
+      route: 'dashboard'
     },
     {
       title: 'Charts',
       icon: 'fas fa-chart-line',
-      route: '/charts'
+      route: 'charts'
     },
     {
       title: 'Tables',
       icon: 'fas fa-table',
-      route: '/tables'
+      route: 'tables'
     },
     {
       title: 'Components',
