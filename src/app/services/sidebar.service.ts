@@ -21,6 +21,11 @@ export class SidebarService {
       route: '/tables'
     },
     {
+      title: 'Forms',
+      icon: 'fas fa-edit',
+      route: '/tables'
+    },
+    {
       title: 'Components',
       icon: 'fab fa-elementor',
       route: '*',
@@ -43,15 +48,9 @@ export class SidebarService {
       ]
     },
     {
-      title: 'Other',
-      icon: 'fas fa-th-list',
-      route: '*',
-      submenu: [
-        { title: 'Navbar', url: '/navbar' },
-        { title: 'Cards', url: '/cards' },
-        { title: 'Maps', url: '/maps' },
-        { title: 'Video Player', url: '/video' },
-      ]
+      title: 'Settings',
+      icon: 'fas fa-wrench',
+      route: '/settings'
     }
   ];
 }
