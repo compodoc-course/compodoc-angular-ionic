@@ -20,6 +20,7 @@ import { PieChartComponent } from '../components/charts/pie-chart/pie-chart.comp
 import { RadarChartComponent } from '../components/charts/radar-chart/radar-chart.component';
 import { LineChartComponent } from '../components/charts/line-chart/line-chart.component';
 import { TablesComponent } from './tables/tables.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -30,7 +31,8 @@ const COMPONENTS = [
   RadarChartComponent,
   DoughnutChartComponent,
   TablesComponent,
-  ChartComponent
+  ChartComponent,
+  SettingsComponent
 ];
 
 const DECLARATIONS = [...[PagesComponent], ...COMPONENTS];

@@ -3,6 +3,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartComponent } from './charts/chart.component';
 import { TablesComponent } from './tables/tables.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const pagesRoutes: Routes = [
   {
@@ -12,6 +13,7 @@ const pagesRoutes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'charts', component: ChartComponent },
       { path: 'tables', component: TablesComponent },
+      { path: 'settings', component: SettingsComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }
