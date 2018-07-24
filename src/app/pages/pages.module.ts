@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { SharedModule } from '../shared/shared.module';
 import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+import { TableModule } from 'ngx-easy-table';
 
 // Components
 import { PagesComponent } from './pages.component';
@@ -50,7 +51,8 @@ const DECLARATIONS = [...[PagesComponent], ...COMPONENTS];
       customClass: 'modal-content',
       confirmButtonClass: 'btn btn-primary',
       cancelButtonClass: 'btn'
-    })
+    }),
+    TableModule
   ],
   exports: COMPONENTS,
   declarations: DECLARATIONS
