@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigurationService } from './configuration.service';
+import { HttpClient } from '../../../../node_modules/@angular/common/http';
 
 @Component({
   selector: 'app-tables',
@@ -31,9 +32,19 @@ export class TablesComponent implements OnInit {
     name: 'Heidi Duncan',
     isActive: true,
   }];
-  constructor() {}
+  people: any[] = [];
+  peopleColumns = [
+    { key: 'name', title: 'Name' },
+    { key: 'email', title: 'Email' },
+    { key: 'regDate', title: 'Register Date' },
+    { key: 'city', title: 'City' },
+    { key: 'age', title: 'Age' },
+  ];
+  constructor(private http: HttpClient) {}
   ngOnInit() {
     this.configuration = ConfigurationService._config;
+    this.http.get('assets/data/people.json')
+    .subscribe((res: any) => this.people = res);
   }
 
 }
