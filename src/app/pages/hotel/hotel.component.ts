@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelService } from './hotel.service';
+import { ConfigurationService } from './../tables/configuration.service';
+
 
 @Component({
   selector: 'app-hotel',
@@ -7,12 +9,35 @@ import { HotelService } from './hotel.service';
   styleUrls: ['./hotel.component.css']
 })
 export class HotelComponent implements OnInit {
-
-  constructor( private hotel: HotelService) { }
+  configuration;
+  columns = [
+    { key: 'id', title: 'ID' },
+    { key: 'code', title: 'Code' },
+    { key: 'name', title: 'Name' },
+    { key: 'stars', title: 'Number of stars' },
+    { key: 'rooms', title: 'Total rooms' },
+    { key: 'manage', title: 'Manage' }
+  ];
+  data;
+  selected;
+  modal = false;
+  constructor(private hotel: HotelService) {}
 
   ngOnInit() {
-    this.hotel.getAll().subscribe();
+    this.hotel.getAll().subscribe(res => {
+      this.data = res;
+      console.log(this.data);
+    });
     this.hotel.getSelectItem(1).subscribe();
+    this.configuration = ConfigurationService._config;
   }
 
+  onEvent(event) {
+    console.log(event);
+    this.selected = JSON.stringify(event.value.row, null, 2);
+  }
+
+  showDetailsAndEdit() {
+    console.log(this.selected);
+  }
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Hotel } from './hotel.interface';
+import { Config } from 'ngx-easy-table/src/app/ngx-easy-table/model/config';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class HotelService {
   }
 
   getAll() {
-    return this.getQuery('api/hotels').pipe( map( data => console.log(data) ));
+    return this.getQuery('api/hotels').pipe( map( data => data));
   }
 
   getSelectItem(id: number) {
