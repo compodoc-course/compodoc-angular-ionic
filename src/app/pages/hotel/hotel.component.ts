@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HotelService } from './hotel.service';
 
 @Component({
   selector: 'app-hotel',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelComponent implements OnInit {
 
-  constructor() { }
+  constructor( private hotel: HotelService) { }
 
   ngOnInit() {
+    this.hotel.getAll().subscribe();
+    this.hotel.getSelectItem(1).subscribe();
   }
 
 }

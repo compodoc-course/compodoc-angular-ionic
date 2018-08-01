@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigurationService } from './configuration.service';
-import { HttpClient } from '../../../../node_modules/@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tables',
