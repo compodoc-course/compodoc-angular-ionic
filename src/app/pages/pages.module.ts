@@ -22,18 +22,28 @@ import { RadarChartComponent } from '../components/charts/radar-chart/radar-char
 import { LineChartComponent } from '../components/charts/line-chart/line-chart.component';
 import { TablesComponent } from './tables/tables.component';
 import { SettingsComponent } from './settings/settings.component';
+import { NutritionalRegimenComponent } from './nutritional-regimen/nutritional-regimen.component';
+import { HotelComponent } from './hotel/hotel.component';
+import { StayComponent } from './stay/stay.component';
+import { ClientComponent } from './client/client.component';
+import { UserComponent } from './user/user.component';
 
 const COMPONENTS = [
   DashboardComponent,
   LineChartComponent,
   BarChartComponent,
+  NutritionalRegimenComponent,
+  HotelComponent,
   PolarAreaChartComponent,
   PieChartComponent,
   RadarChartComponent,
   DoughnutChartComponent,
   TablesComponent,
   ChartComponent,
-  SettingsComponent
+  SettingsComponent,
+  StayComponent,
+  ClientComponent,
+  UserComponent
 ];
 
 const DECLARATIONS = [...[PagesComponent], ...COMPONENTS];

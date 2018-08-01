@@ -16,6 +16,31 @@ export class SidebarService {
       route: '/charts'
     },
     {
+      title: 'Hotel',
+      icon: 'fas fa-h-square',
+      route: '/hotel'
+    },
+    {
+      title: 'Users',
+      icon: 'fas fa-users',
+      route: '/users'
+    },
+    {
+      title: 'Clients',
+      icon: 'fas fa-user-circle',
+      route: '/clients'
+    },
+    {
+      title: 'Stay',
+      icon: 'fas fa-bed',
+      route: '/stays'
+    },
+    {
+      title: 'Nutritional',
+      icon: 'fab fa-nutritionix',
+      route: '/nutritional-regimen'
+    },
+    {
       title: 'Tables',
       icon: 'fas fa-table',
       route: '/tables'
