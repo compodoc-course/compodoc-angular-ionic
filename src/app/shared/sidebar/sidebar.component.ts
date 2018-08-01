@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
@@ -27,7 +27,7 @@ export class SidebarComponent {
     console.log('hello');
   }
 
-  toggled(toggler: boolean = false) {
+  toggled() {
     const find = document.getElementsByClassName(this.findClassToggled)[0];
     if (find !== undefined) {
       // remove
