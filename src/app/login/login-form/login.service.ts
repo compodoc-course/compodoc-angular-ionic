@@ -24,16 +24,14 @@ export class LoginService {
     return this.getQuery(`api/hotels/${id}`).pipe(map(data => console.log(data)));
   }
 
-  setLogin(user: String, password: String) {
-    const login: Login = {user: user, password: password };
+  setLogin(login: Login) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    return this._http.post<any>(`${this.API_URL}login_check`, login, httpOptions).pipe(
+    return this._http.post<Login>(`${this.API_URL}login_check`, login, httpOptions).pipe(
       map(res => {
-        console.log(res.name);
         return res;
       }));
   }

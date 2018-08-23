@@ -1,4 +1,6 @@
 interface Login {
-    user: String;
-    password: String;
+    _username: String;
+    _password: String;
+    _target_path: String;
+    _failure_path: String;
 }
