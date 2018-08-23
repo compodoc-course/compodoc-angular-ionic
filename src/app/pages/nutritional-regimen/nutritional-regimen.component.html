@@ -1,3 +1,33 @@
-<p>
-  nutritional-regimen works!
-</p>
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fa fa-table"></i> Nutritional Regimen List
+  </div>
+  <div class="card-body">
+    <ngx-table [configuration]="configuration" [data]="data" [columns]="columns" (event)="onEvent($event)">
+      <ng-template let-row>
+        <td>
+          <span class="font-small">{{row.code}}</span>
+        </td>
+        <td>
+          <span class="font-small">{{row.desc_es}}</span>
+        </td>
+        <td>
+          <span class="font-small">{{row.desc_en}}</span>
+        </td>
+        <td>
+          <span class="font-small">{{row.desc_eu}}</span>
+        </td>
+        <td>
+          <span class="font-small">{{row.desc_ca}}</span>
+        </td>
+        <!--<td>
+          <button class="btn btn-primary btn-sm" (click)="showDetailsAndEdit()">
+            Edit
+          </button>
+        </td>-->
+      </ng-template>
+    </ngx-table>
+  </div>
+  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+

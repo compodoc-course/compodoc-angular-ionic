@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +7,14 @@ import swal from 'sweetalert2';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  user: User;
+  constructor(private router: Router) {}
 
   ngOnInit() {
+    this.user = JSON.parse(localStorage.getItem('user_credentials'));
+    if (this.user === null) {
+      this.router.navigate(['/login']);
+    }
+    console.log(this.user);
   }
 }
