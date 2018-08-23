@@ -26,14 +26,12 @@ export class HotelComponent implements OnInit {
   ngOnInit() {
     this.hotel.getAll().subscribe(res => {
       this.data = res;
-      console.log(this.data);
     });
     this.hotel.getSelectItem(1).subscribe();
     this.configuration = ConfigurationService._config;
   }
 
   onEvent(event) {
-    console.log(event);
     this.selected = JSON.stringify(event.value.row, null, 2);
   }
 
