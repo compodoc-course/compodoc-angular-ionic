@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
     }).then(result => {
       if (result.value) {
         console.log('go to login...');
+        localStorage.setItem('user_credentials', null);
         this.router.navigate(['/login']);
       }
     });
