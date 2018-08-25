@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
-import swal from 'sweetalert2';
+import { AlertService } from '../../services/alert.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -17,33 +17,28 @@ export class LoginComponent implements OnInit {
     _failure_path: '/api/user/fail'
   };
 
-  constructor(private _login: LoginService, private router: Router) {}
+  constructor(
+    private _login: LoginService,
+    private router: Router,
+    private alertService: AlertService,
+    private localStorage: LocalStorageService
+  ) {}
 
   ngOnInit() {}
 
   makeLogin() {
     this.login._target_path = `/api/users/${this.login._username}`;
-    console.log(this.login);
-    swal({
-      title: 'Comprobando los datos de acceso',
-      html: 'Espera un poco ;).',
-      onOpen: () => {
-        swal.showLoading();
-      },
-    }).then((result) => {
-      if (
-        // Read more about handling dismissals
-        result.dismiss === swal.DismissReason.timer
-      ) {
-        console.log('I was closed by the timer');
-      }
-    });
+    this.alertService.loadData(
+      'Comprobando los datos de acceso',
+      '¡¡En un instante accederás!!'
+    );
     this._login.setLogin(this.login).subscribe(
       data => {
         // this.router.navigate(['/heroe', data.name]);
         console.log(data);
-        swal.close();
-        localStorage.setItem('user_credentials', JSON.stringify(data));
+        this.alertService
+  .closeAlert();
+        this.localStorage.saveUserCredentials(data);
         this.router.navigate(['/dashboard']);
       },
       error => console.error(error)
