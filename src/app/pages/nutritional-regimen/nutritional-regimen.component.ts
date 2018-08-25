@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NutritionalRegimenService } from './nutritional-regimen.service';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'app-nutritional-regimen',
@@ -18,11 +19,13 @@ export class NutritionalRegimenComponent implements OnInit {
   data;
   selected;
   modal = false;
-  constructor(private _nutritionalService: NutritionalRegimenService) {}
+  constructor(private _nutritionalService: NutritionalRegimenService, private alertService: AlertService) {}
 
   ngOnInit() {
+    this.alertService.loadData('Cargando datos de los regimenes nutricionales', '¡¡En un instante accederás!!');
     this._nutritionalService.getAll().subscribe(data => {
       this.data = data;
+      this.alertService.closeAlert();
     });
   }
 }
