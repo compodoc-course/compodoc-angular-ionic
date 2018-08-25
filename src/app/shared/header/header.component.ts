@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { AlertService } from '../../services/alert.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -8,20 +9,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor( private router: Router) {}
+  userNameLastname: string;
+  constructor(private router: Router, private alertService: AlertService, private localStorage: LocalStorageService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const loginData = this.localStorage.takeUserLoginData();
+    this.userNameLastname =  `${loginData.name} ${loginData.lastname}`;
+  }
 
   logout() {
-    swal({
-      title: 'Are you sure?',
-      text: 'You won\'t be able to revert this!',
-      type: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, close session!'
-    }).then(result => {
+
+    this.alertService.confirm(
+      {
+        title: 'Are you sure ?',
+        text: 'You won\'t be able to revert this!',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, close session!'
+      }
+    )
+    .then(result => {
       if (result.value) {
         console.log('go to login...');
         localStorage.setItem('user_credentials', null);
