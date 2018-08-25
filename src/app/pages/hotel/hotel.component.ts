@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelService } from './hotel.service';
 import { ConfigurationService } from './../tables/configuration.service';
+import { AlertService } from '../../services/alert.service';
+import { SharedService } from '../../services/shared.service';
 
 
 @Component({
@@ -9,6 +11,7 @@ import { ConfigurationService } from './../tables/configuration.service';
   styleUrls: ['./hotel.component.css']
 })
 export class HotelComponent implements OnInit {
+  showInfo = false;
   configuration;
   columns = [
     { key: 'id', title: 'ID' },
@@ -21,13 +24,23 @@ export class HotelComponent implements OnInit {
   data;
   selected;
   modal = false;
-  constructor(private hotel: HotelService) {}
+  constructor(
+    private hotel: HotelService,
+    private alertService: AlertService,
+    private selectPageService: SharedService
+  ) {}
 
   ngOnInit() {
+    this.selectPageService.setSelectPage('hotel');
+    this.alertService.loadData(
+      'Cargando datos de los hoteles',
+      '¡¡En un instante accederás!!'
+    );
     this.hotel.getAll().subscribe(res => {
       this.data = res;
+      this.showInfo = true;
+      this.alertService.closeAlert();
     });
-    this.hotel.getSelectItem(1).subscribe();
     this.configuration = ConfigurationService._config;
   }
 

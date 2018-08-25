@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from '../../services/shared.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,13 +10,17 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   user: User;
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private selectPageService: SharedService,
+    private localStorageService: LocalStorageService
+  ) {}
 
   ngOnInit() {
-    this.user = JSON.parse(localStorage.getItem('user_credentials'));
+    this.user = this.localStorageService.takeUserLoginData();
+    this.selectPageService.setSelectPage('dashboard');
     if (this.user === null) {
       this.router.navigate(['/login']);
     }
-    console.log(this.user);
   }
 }
