@@ -8,12 +8,15 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 import { CommonModule } from '@angular/common';
+import { CapitalizePipe } from '../pipes/capitalize.pipe';
 
 const COMPONENTS = [HeaderComponent, SidebarComponent, BreadcrumbComponent, NotpagefoundComponent, FooterComponent, ScrollTopComponent];
+const PIPES = [CapitalizePipe];
 
+const DECLARATIONS = [...PIPES, ...COMPONENTS];
 @NgModule({
-    imports: [CommonModule, RouterModule],
-    declarations: COMPONENTS,
-    exports: COMPONENTS
+  imports: [CommonModule, RouterModule],
+  declarations: DECLARATIONS,
+    exports: DECLARATIONS
 })
-export class SharedModule { }
+export class SharedModule {}
