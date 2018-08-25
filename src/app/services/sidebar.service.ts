@@ -50,7 +50,7 @@ export class SidebarService {
       icon: 'fas fa-edit',
       route: '/tables'
     },
-    {
+    /*{
       title: 'Components',
       icon: 'fab fa-elementor',
       route: '*',
@@ -71,7 +71,7 @@ export class SidebarService {
         { title: 'Maps', url: '/maps' },
         { title: 'Video Player', url: '/video' },
       ]
-    },
+    },*/
     {
       title: 'Settings',
       icon: 'fas fa-wrench',
