@@ -9,6 +9,7 @@ import { HotelComponent } from './hotel/hotel.component';
 import { StayComponent } from './stay/stay.component';
 import { UserComponent } from './user/user.component';
 import { ClientComponent } from './client/client.component';
+import { SupportComponent } from './support/support.component';
 
 const pagesRoutes: Routes = [
   {
@@ -24,6 +25,7 @@ const pagesRoutes: Routes = [
       { path: 'clients', component: ClientComponent },
       { path: 'tables', component: TablesComponent },
       { path: 'settings', component: SettingsComponent },
+      { path: 'support', component: SupportComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }

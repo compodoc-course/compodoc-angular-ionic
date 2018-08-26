@@ -3,6 +3,7 @@ import { HotelService } from './hotel.service';
 import { ConfigurationService } from './../tables/configuration.service';
 import { AlertService } from '../../services/alert.service';
 import { SharedService } from '../../services/shared.service';
+import swal from 'sweetalert2';
 
 
 @Component({
@@ -50,5 +51,26 @@ export class HotelComponent implements OnInit {
 
   showDetailsAndEdit() {
     console.log(this.selected);
+    this.addHotelForm();
+  }
+
+  async addHotelForm() {
+    const { value: formValues } = await swal({
+      title: 'Multiple inputs',
+      html:
+        '<label>Text</label><input id="swal-input1" class="swal2-input">' +
+        '<input id="swal-input2" class="swal2-input">',
+      focusConfirm: false,
+      preConfirm: () => {
+        return [
+          (document.getElementById('swal-input1') as HTMLInputElement).value,
+          (document.getElementById('swal-input2') as HTMLInputElement).value,
+        ];
+      }
+    });
+
+    if (formValues) {
+      swal(JSON.stringify(formValues));
+    }
   }
 }

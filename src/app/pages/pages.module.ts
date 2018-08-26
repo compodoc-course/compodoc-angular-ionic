@@ -27,6 +27,7 @@ import { HotelComponent } from './hotel/hotel.component';
 import { StayComponent } from './stay/stay.component';
 import { ClientComponent } from './client/client.component';
 import { UserComponent } from './user/user.component';
+import { SupportComponent } from './support/support.component';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -43,7 +44,8 @@ const COMPONENTS = [
   SettingsComponent,
   StayComponent,
   ClientComponent,
-  UserComponent
+  UserComponent,
+  SupportComponent
 ];
 
 const DECLARATIONS = [...[PagesComponent], ...COMPONENTS];
