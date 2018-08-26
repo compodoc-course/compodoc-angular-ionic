@@ -45,11 +45,6 @@ export class SidebarService {
       icon: 'fas fa-table',
       route: '/tables'
     },
-    {
-      title: 'Forms',
-      icon: 'fas fa-edit',
-      route: '/tables'
-    },
     /*{
       title: 'Components',
       icon: 'fab fa-elementor',
