@@ -5,7 +5,6 @@ import { AlertService } from '../../services/alert.service';
 import { SharedService } from '../../services/shared.service';
 import swal from 'sweetalert2';
 
-
 @Component({
   selector: 'app-hotel',
   templateUrl: './hotel.component.html',
@@ -58,19 +57,26 @@ export class HotelComponent implements OnInit {
     const { value: formValues } = await swal({
       title: 'Multiple inputs',
       html:
+        '<div class="form-group">' +
+        '<label for= "exampleInputEmail1" > Email address</ label >' +
+        '<input type="email" class= "form-control" id = "exampleInputEmail1" aria - describedby="emailHelp" placeholder = "Enter email" >' +
+        '<small id="emailHelp" class= "form-text text-muted" > We\'ll never share your email with anyone else.</small>' +
+        '</div>' +
         '<label>Text</label><input id="swal-input1" class="swal2-input">' +
         '<input id="swal-input2" class="swal2-input">',
       focusConfirm: false,
       preConfirm: () => {
         return [
+          (document.getElementById('exampleInputEmail1') as HTMLInputElement)
+            .value,
           (document.getElementById('swal-input1') as HTMLInputElement).value,
-          (document.getElementById('swal-input2') as HTMLInputElement).value,
+          (document.getElementById('swal-input2') as HTMLInputElement).value
         ];
       }
     });
 
     if (formValues) {
-      swal(JSON.stringify(formValues));
+      console.log(JSON.stringify(formValues));
     }
   }
 }
