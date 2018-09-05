@@ -1,0 +1,12 @@
+.select {
+    text-decoration: underline !important;
+}
+
+.page-link {
+    color: #007bff !important;
+}
+
+.disabled {
+    color: #aabacc !important;
+    background: transparent
+}
