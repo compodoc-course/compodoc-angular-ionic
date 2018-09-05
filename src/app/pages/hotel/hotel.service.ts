@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { Hotel } from './hotel.interface';
-import { Config } from 'ngx-easy-table/src/app/ngx-easy-table/model/config';
+import { Hotel } from '../../interfaces/hotel.interface';
 
 @Injectable({
   providedIn: 'root'
