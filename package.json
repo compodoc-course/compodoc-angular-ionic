@@ -12,6 +12,8 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.3",
+    "@agm/js-marker-clusterer": "^1.0.0-beta.3",
     "@angular/animations": "^6.0.3",
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
@@ -25,6 +27,7 @@
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "i18n-config": "^1.0.3",
+    "js-marker-clusterer": "^1.0.0",
     "ng2-charts": "^1.6.0",
     "ngx-easy-table": "^5.1.0",
     "rxjs": "^6.0.0",
