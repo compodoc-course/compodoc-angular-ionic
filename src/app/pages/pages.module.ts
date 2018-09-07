@@ -14,6 +14,7 @@ import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 // Components
 import { PagesComponent } from './pages.component';
+import { RacesComponent } from './races/races.component';
 import { ChartComponent } from './charts/chart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DoughnutChartComponent } from '../components/charts/doughnut-chart/doughnut-chart.component';
@@ -24,13 +25,22 @@ import { RadarChartComponent } from '../components/charts/radar-chart/radar-char
 import { LineChartComponent } from '../components/charts/line-chart/line-chart.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SupportComponent } from './support/support.component';
-import { RoundPipe } from '../pipes/round.pipe';
+import { CircuitsComponent } from './circuits/circuits.component';
+import { ChampionsComponent } from './champions/champions.component';
+import { DriversComponent } from './drivers/drivers.component';
 
 // Constants
 import { GOOGLEMAPS } from '../../environments/api-keys';
 
+// Pipes
+import { RoundPipe } from '../pipes/round.pipe';
+
+
 const COMPONENTS = [
+  ChampionsComponent,
+  CircuitsComponent,
   DashboardComponent,
+  DriversComponent,
   LineChartComponent,
   BarChartComponent,
   PolarAreaChartComponent,
@@ -38,6 +48,7 @@ const COMPONENTS = [
   RadarChartComponent,
   DoughnutChartComponent,
   ChartComponent,
+  RacesComponent,
   SettingsComponent,
   SupportComponent
 ];

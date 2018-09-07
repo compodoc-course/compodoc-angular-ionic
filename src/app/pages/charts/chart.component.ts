@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
-export class ChartComponent {
+export class ChartComponent implements OnInit {
   /**
    * Values to use with dona graphic component
    */
@@ -95,4 +96,10 @@ export class ChartComponent {
   public pieChartData: any[] =  [12.21, 15.58, 11.25, 8.32, 39];
   public pieChartColors = ['#007bff', '#dc3545', '#ffc107', '#28a745'];
   public pieChartType = 'pie';
+
+  constructor(private selectPageService: SharedService) { }
+
+  ngOnInit() {
+    this.selectPageService.setSelectPage('Charts');
+  }
 }
