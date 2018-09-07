@@ -14,6 +14,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     const loginData = this.localStorage.takeUserLoginData();
+    if (loginData === null) {
+      this.localStorage.clearSelectData('user_credentials');
+      this.router.navigate(['/login']);
+    }
     this.userNameLastname =  `${loginData.name} ${loginData.lastname}`;
   }
 
@@ -33,7 +37,7 @@ export class HeaderComponent implements OnInit {
     .then(result => {
       if (result.value) {
         console.log('go to login...');
-        localStorage.setItem('user_credentials', null);
+        this.localStorage.clearSelectData('user_credentials');
         this.router.navigate(['/login']);
       }
     });
