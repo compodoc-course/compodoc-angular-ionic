@@ -7,7 +7,7 @@ export class LocalStorageService {
     USER_CREDENTIALS = 'user_credentials';
     constructor() { }
     saveUserCredentials(login: Login) {
-        localStorage.setItem(this.USER_CREDENTIALS, JSON.stringify(login));
+        this.saveDataInLocal( this.USER_CREDENTIALS, login, true);
     }
 
     getNameLastName() {
@@ -17,5 +17,12 @@ export class LocalStorageService {
 
     takeUserLoginData() {
         return JSON.parse(localStorage.getItem(this.USER_CREDENTIALS));
+    }
+
+    saveDataInLocal(itemParam: string, value: any, json: boolean = false ) {
+        if (!json) {
+            localStorage.setItem(itemParam, value);
+        }
+        localStorage.setItem(itemParam, JSON.stringify(value));
     }
 }

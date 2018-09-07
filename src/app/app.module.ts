@@ -6,7 +6,6 @@ import { LoginModule } from './login/login.module';
 
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
-import { RoundPipe } from './pipes/round.pipe';
 
 @NgModule({
   declarations: [
