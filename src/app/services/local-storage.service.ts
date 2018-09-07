@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class LocalStorageService {
     USER_CREDENTIALS = 'user_credentials';
     constructor() { }
-    saveUserCredentials(login: Login) {
+    saveUserCredentials(login: User) {
         this.saveDataInLocal( this.USER_CREDENTIALS, login, true);
     }
 
@@ -24,5 +24,9 @@ export class LocalStorageService {
             localStorage.setItem(itemParam, value);
         }
         localStorage.setItem(itemParam, JSON.stringify(value));
+    }
+
+    clearSelectData(itemParam: string) {
+        localStorage.removeItem(itemParam);
     }
 }
