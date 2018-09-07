@@ -12,7 +12,7 @@ export class SidebarService {
     },
     {
       title: 'Charts',
-      icon: 'fas fa-tachometer-alt',
+      icon: 'fas fa-chart-line',
       route: '/charts'
     },
     {

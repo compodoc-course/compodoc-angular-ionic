@@ -9,6 +9,8 @@ import { ChartsModule } from 'ng2-charts';
 import { SharedModule } from '../shared/shared.module';
 import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 import { TableModule } from 'ngx-easy-table';
+import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 // Components
 import { PagesComponent } from './pages.component';
@@ -23,6 +25,9 @@ import { LineChartComponent } from '../components/charts/line-chart/line-chart.c
 import { SettingsComponent } from './settings/settings.component';
 import { SupportComponent } from './support/support.component';
 import { RoundPipe } from '../pipes/round.pipe';
+
+// Constants
+import { GOOGLEMAPS } from '../../environments/api-keys';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -44,6 +49,10 @@ const DECLARATIONS = [...[PagesComponent], ...PIPES, ...COMPONENTS];
 @NgModule({
   imports: [
     PAGE_ROUTES,
+    AgmJsMarkerClustererModule,
+    AgmCoreModule.forRoot({
+      apiKey: GOOGLEMAPS
+    }),
     I18nConfigModule,
     BrowserModule,
     FormsModule,
