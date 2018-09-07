@@ -15,10 +15,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     const loginData = this.localStorage.takeUserLoginData();
     if (loginData === null) {
+      this.userNameLastname = '';
+      console.log('go to login...from header');
       this.localStorage.clearSelectData('user_credentials');
       this.router.navigate(['/login']);
+    } else {
+      this.userNameLastname = `${loginData.name} ${loginData.lastname}`;
     }
-    this.userNameLastname =  `${loginData.name} ${loginData.lastname}`;
   }
 
   logout() {
