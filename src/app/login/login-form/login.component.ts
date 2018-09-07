@@ -19,7 +19,12 @@ export class LoginComponent implements OnInit {
     private localStorage: LocalStorageService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const user = this.localStorage.takeUserLoginData();
+    if (user !== null) {
+      this.router.navigate(['/dashboard']);
+    }
+  }
 
   makeLogin() {
     this.localStorage.saveDataInLocal(
