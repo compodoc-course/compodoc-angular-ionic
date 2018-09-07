@@ -5,14 +5,15 @@
         <h5 class="card-title text-center">Sign In</h5>
         
         <form class="form-signin" (ngSubmit)="makeLogin()" #forma="ngForm">
-          <div class="form-label-group">
-            <input type="email" id="inputEmail" class="form-control" name="_username" placeholder="Email address" required autofocus [(ngModel)] = "login._username">
+          <div class="form-group">
             <label for="inputEmail">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" name="_username" placeholder="Email address" required autofocus
+              [(ngModel)]="login._username">
           </div>
-
-          <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" name="_password" placeholder="Password" required [(ngModel)] = "login._password">
+          
+          <div class="form-group">
             <label for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" class="form-control" name="_password" placeholder="Password" required [(ngModel)]="login._password">
           </div>
 
           <div class="custom-control custom-checkbox mb-3">
