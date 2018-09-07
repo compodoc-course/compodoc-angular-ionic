@@ -10,8 +10,7 @@ import { RoundPipe } from './pipes/round.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RoundPipe
+    AppComponent
   ],
   imports: [
     APP_ROUTES,
