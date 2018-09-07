@@ -8,7 +8,12 @@ export class SidebarService {
     {
       title: 'Current Year',
       icon: 'fas fa-tachometer-alt',
-      route: '/current'
+      route: '/dashboard'
+    },
+    {
+      title: 'Charts',
+      icon: 'fas fa-tachometer-alt',
+      route: '/charts'
     },
     {
       title: 'Drivers',
