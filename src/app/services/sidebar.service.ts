@@ -6,67 +6,25 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
   menu: any = [
     {
-      title: 'Dashboard',
+      title: 'Current Year',
       icon: 'fas fa-tachometer-alt',
-      route: '/dashboard'
+      route: '/current'
     },
     {
-      title: 'Charts',
+      title: 'Drivers',
       icon: 'fas fa-chart-line',
-      route: '/charts'
+      route: '/drivers'
     },
     {
-      title: 'Hotel',
+      title: 'Circuits',
       icon: 'fas fa-h-square',
-      route: '/hotel'
+      route: '/circuits'
     },
     {
-      title: 'Users',
+      title: 'Races',
       icon: 'fas fa-users',
-      route: '/users'
+      route: '/races'
     },
-    {
-      title: 'Clients',
-      icon: 'fas fa-user-circle',
-      route: '/clients'
-    },
-    {
-      title: 'Stay',
-      icon: 'fas fa-bed',
-      route: '/stays'
-    },
-    {
-      title: 'Nutritional',
-      icon: 'fab fa-nutritionix',
-      route: '/nutritional-regimen'
-    },
-    {
-      title: 'Tables',
-      icon: 'fas fa-table',
-      route: '/tables'
-    },
-    /*{
-      title: 'Components',
-      icon: 'fab fa-elementor',
-      route: '*',
-      submenu: [
-        { title: 'Navbar', url: '/navbar' },
-        { title: 'Cards', url: '/cards' },
-        { title: 'Maps', url: '/maps' },
-        { title: 'Video Player', url: '/video' },
-      ]
-    },
-    {
-      title: 'Example pages',
-      icon: 'fas fa-th-list',
-      route: '*',
-      submenu: [
-        { title: 'Navbar', url: '/navbar' },
-        { title: 'Cards', url: '/cards' },
-        { title: 'Maps', url: '/maps' },
-        { title: 'Video Player', url: '/video' },
-      ]
-    },*/
     {
       title: 'Settings',
       icon: 'fas fa-wrench',
