@@ -20,13 +20,7 @@ import { PolarAreaChartComponent } from '../components/charts/polar-area-chart/p
 import { PieChartComponent } from '../components/charts/pie-chart/pie-chart.component';
 import { RadarChartComponent } from '../components/charts/radar-chart/radar-chart.component';
 import { LineChartComponent } from '../components/charts/line-chart/line-chart.component';
-import { TablesComponent } from './tables/tables.component';
 import { SettingsComponent } from './settings/settings.component';
-import { NutritionalRegimenComponent } from './nutritional-regimen/nutritional-regimen.component';
-import { HotelComponent } from './hotel/hotel.component';
-import { StayComponent } from './stay/stay.component';
-import { ClientComponent } from './client/client.component';
-import { UserComponent } from './user/user.component';
 import { SupportComponent } from './support/support.component';
 import { RoundPipe } from '../pipes/round.pipe';
 
@@ -34,18 +28,12 @@ const COMPONENTS = [
   DashboardComponent,
   LineChartComponent,
   BarChartComponent,
-  NutritionalRegimenComponent,
-  HotelComponent,
   PolarAreaChartComponent,
   PieChartComponent,
   RadarChartComponent,
   DoughnutChartComponent,
-  TablesComponent,
   ChartComponent,
   SettingsComponent,
-  StayComponent,
-  ClientComponent,
-  UserComponent,
   SupportComponent
 ];
 
