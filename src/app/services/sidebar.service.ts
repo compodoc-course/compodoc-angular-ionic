@@ -11,23 +11,28 @@ export class SidebarService {
       route: '/dashboard'
     },
     {
+      title: 'Champions',
+      icon: 'fas fa-award',
+      route: '/champions'
+    },
+    {
       title: 'Charts',
       icon: 'fas fa-chart-line',
       route: '/charts'
     },
     {
       title: 'Drivers',
-      icon: 'fas fa-chart-line',
+      icon: 'fas fa-car',
       route: '/drivers'
     },
     {
       title: 'Circuits',
-      icon: 'fas fa-h-square',
+      icon: 'fas fa-road',
       route: '/circuits'
     },
     {
       title: 'Races',
-      icon: 'fas fa-users',
+      icon: 'fas fa-flag-checkered',
       route: '/races'
     },
     {
