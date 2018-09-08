@@ -37,7 +37,6 @@ export class DriversComponent implements OnInit {
           `Drivers List to  ${this.selectYear} season`
         );
         this.driversList = data;
-        console.log(this.driversList);
         this.showInfo = true;
         this._alertService.closeAlert();
       },

@@ -23,8 +23,12 @@
             <td>{{driver.dateOfBirth}}</td>
             <td>{{driver.nationality}}</td>
             <td>
-              <img src="../../../assets/internet.png" />
+              <a href="{{driver.url}}" title="Web browser version">
+                <img src="../../../assets/internet.png" />
+              </a>
+              <a href="{{driver.url | wikipediaUrlMobile}}" title="Mobile version">
               <img src="../../../assets/mobile.png" />
+              </a>
             </td>
           </tr>
         </ng-template>
