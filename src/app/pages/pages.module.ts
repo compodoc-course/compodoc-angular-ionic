@@ -34,7 +34,7 @@ import { GOOGLEMAPS } from '../../environments/api-keys';
 
 // Pipes
 import { RoundPipe } from '../pipes/round.pipe';
-
+import { WikipediaUrlMobilePipe } from '../pipes/wikipedia-url-mobile.pipe';
 
 const COMPONENTS = [
   ChampionsComponent,
@@ -53,7 +53,7 @@ const COMPONENTS = [
   SupportComponent
 ];
 
-const PIPES = [RoundPipe];
+const PIPES = [RoundPipe, WikipediaUrlMobilePipe];
 
 const DECLARATIONS = [...[PagesComponent], ...PIPES, ...COMPONENTS];
 
