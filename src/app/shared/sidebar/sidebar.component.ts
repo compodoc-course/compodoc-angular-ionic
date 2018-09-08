@@ -28,15 +28,17 @@ export class SidebarComponent {
   }
 
   toggled() {
-    const find = document.getElementsByClassName(this.findClassToggled)[0];
-    if (find !== undefined) {
+    const find = localStorage.getItem('toggleSideNav');
+    if (find === '1') {
       // remove
-      find.classList.remove(this.findClassToggled);
+      document
+        .getElementById('page-top')
+        .classList.remove(this.findClassToggled);
       localStorage.setItem('toggleSideNav', '0');
     } else {
-      const takePageTopId = document.getElementById('page-top');
-      // add
-      takePageTopId.classList.add(this.findClassToggled);
+      document
+        .getElementById('page-top')
+        .classList.add(this.findClassToggled);
       localStorage.setItem('toggleSideNav', '1');
     }
   }
