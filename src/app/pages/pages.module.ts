@@ -26,8 +26,9 @@ import { LineChartComponent } from '../components/charts/line-chart/line-chart.c
 import { SettingsComponent } from './settings/settings.component';
 import { SupportComponent } from './support/support.component';
 import { CircuitsComponent } from './circuits/circuits.component';
-import { ChampionsComponent } from './champions/champions.component';
 import { DriversComponent } from './drivers/drivers.component';
+import { SeasonsComponent } from './seasons/seasons.component';
+import { GoogleMapsComponent } from '../components/google-maps/google-maps.component';
 
 // Constants
 import { GOOGLEMAPS } from '../../environments/api-keys';
@@ -37,7 +38,8 @@ import { RoundPipe } from '../pipes/round.pipe';
 import { WikipediaUrlMobilePipe } from '../pipes/wikipedia-url-mobile.pipe';
 
 const COMPONENTS = [
-  ChampionsComponent,
+  GoogleMapsComponent,
+  SeasonsComponent,
   CircuitsComponent,
   DashboardComponent,
   DriversComponent,

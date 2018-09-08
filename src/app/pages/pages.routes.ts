@@ -7,7 +7,7 @@ import { SupportComponent } from './support/support.component';
 import { DriversComponent } from './drivers/drivers.component';
 import { CircuitsComponent } from './circuits/circuits.component';
 import { RacesComponent } from './races/races.component';
-import { ChampionsComponent } from './champions/champions.component';
+import { SeasonsComponent } from './seasons/seasons.component';
 
 const pagesRoutes: Routes = [
   {
@@ -19,7 +19,7 @@ const pagesRoutes: Routes = [
       { path: 'drivers', component: DriversComponent },
       { path: 'circuits', component: CircuitsComponent },
       { path: 'races', component: RacesComponent },
-      { path: 'champions', component: ChampionsComponent },
+      { path: 'seasons', component: SeasonsComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'support', component: SupportComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
