@@ -13,7 +13,7 @@ export class DriversService {
   // https://ergast.com/api/f1/2008/drivers/<driver-id>/results/<number-race>.json
 
   listByYear(year) {
-    console.log(URL_LOCALHOST + year + DRIVERS_URLS.ALL_DRIVERS_SELECT);
+    console.log(year + DRIVERS_URLS.ALL_DRIVERS_SELECT);
     return this.request.getQuery(year + DRIVERS_URLS.ALL_DRIVERS_SELECT)
       .pipe(map(data => data['MRData'].DriverTable.Drivers));
   }
