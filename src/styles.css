@@ -3,3 +3,10 @@
 .card {
     margin-bottom: 25px;
 }
+
+.profile-photo {
+    max-height: 25px;
+    transition: 0.5s;
+    border-radius: 50%;
+    margin-top: -7px;
+}
