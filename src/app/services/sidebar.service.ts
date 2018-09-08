@@ -11,9 +11,9 @@ export class SidebarService {
       route: '/dashboard'
     },
     {
-      title: 'Champions',
+      title: 'Seasons',
       icon: 'fas fa-award',
-      route: '/champions'
+      route: '/seasons'
     },
     {
       title: 'Charts',
