@@ -1,3 +1,54 @@
-<p>
-  circuits works!
-</p>
+<app-google-maps *ngIf="showInfo" [circuitsData]="circuitsList"></app-google-maps>
+<div class="card mb-3" *ngIf="showInfo">
+  <!--<div class="card-header">
+    <i class="fa fa-table"></i> circuits List to {{ selectYear }} season
+  </div>-->
+  <div class="card-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Circuit</th>
+          <th scope="col">Locality</th>
+          <th scope="col">More info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-template ngFor let-circuit [ngForOf]="circuitsList" let-i="index">
+          <tr>
+            <td>{{circuit.circuitName}}</td>
+            <td>
+              <a href="https://www.google.com/maps/@{{circuit.Location.lat}},{{circuit.Location.long}},10z" target="_blank">
+                 {{circuit.Location.locality}} ( {{circuit.Location.country}} )
+              </a>
+            </td>
+            <td>
+              <a href="{{circuit.url}}" title="Web browser version" target="_blank">
+                <img src="../../../assets/internet.png" />
+              </a>
+              <a href="{{circuit.url | wikipediaUrlMobile}}" title="Mobile version" target="_blank">
+                <img src="../../../assets/mobile.png" />
+              </a>
+            </td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </table>
+    <!--<nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" [ngClass]="{ 'disabled': currentPage == 1 }" (click)="selectPage(currentPage - 1)" tabindex="-1">Previous</a>
+        </li>
+        <ng-template ngFor let-page [ngForOf]="pages" let-i="index">
+          <li class="page-item">
+            <a class="page-link" [ngClass]="{'select': currentPage == i + 1}" (click)="selectPage(i + 1)">{{ i + 1}}</a>
+          </li>
+        </ng-template>
+        <li class="page-item">
+          <a class="page-link" [ngClass]="{'disabled': currentPage == pages.length }" (click)="selectPage(currentPage + 1)">Next</a>
+        </li>
+      </ul>
+    </nav>-->
+
+  </div>
+  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
