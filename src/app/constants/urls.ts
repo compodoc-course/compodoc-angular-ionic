@@ -11,6 +11,10 @@ export const DRIVERS_URLS = {
     SELECT_DRIVER_ALL_RESULTS: '/results.json?limit=1000'
 };
 
+export const RACES_URLS = {
+    ALL_RACES_SELECT: '/races.json'
+};
+
 export const SEASONS_URLS = {
     ALL_SEASONS_URL: 'seasons.json?limit=100'
 };
@@ -29,4 +33,12 @@ export const CONSTRUCTORS_URLS = {
 export const STATUS_URLS = {
     ALL_HISTORY: 'status.json?limit=1000',
     SELECT_YEAR: '/status.json'
+};
+
+export const IMG_URLS_PRINCIPAL = 'https://mugan86.com/amugika/img/f1/';
+
+export const IMG_PATH_COMPLETE = {
+    CIRCUITS: 'circuits/',
+    DRIVERS: 'drivers/',
+    FLAGS: 'flags/'
 };
