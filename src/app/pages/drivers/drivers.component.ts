@@ -22,15 +22,23 @@ export class DriversComponent implements OnInit {
   ngOnInit() {
     this.showInfo = false;
     this.selectPageService.setSelectPage('drivers');
-    this.selectYearDrivers();
+    this.loadDataFromAssets();
   }
 
+  private loadDataDialog(open: boolean = true) {
+    if (open) {
+      this._alertService.loadData(`Load ${this.selectYear} season drivers!!`, 'Wait a moment please!!');
+    } else {
+      this._alertService.closeAlert();
+    }
+  }
+
+  /**
+   * Take data from server
+   */
   selectYearDrivers(year: string = String(new Date().getFullYear())) {
     this.selectYear = year;
-    this._alertService.loadData(
-      `Load ${this.selectYear} season drivers!!`,
-      'Wait a moment please!!'
-    );
+    this.loadDataDialog();
     this._driversService.listByYear(year).subscribe(
       (data: Driver[]) => {
         this.selectPageService.setSelectPage(
@@ -40,7 +48,25 @@ export class DriversComponent implements OnInit {
         this.showInfo = true;
         this._alertService.closeAlert();
       },
-      errorService => {}
+      _errorService => {
+        this.loadDataFromAssets();
+      }
     );
+  }
+
+  /**
+   * Take data from a local file in json format
+   */
+  loadDataFromAssets() {
+    this.selectYear = '2018';
+    this.loadDataDialog();
+    this._driversService
+      .loadListFromLocal()
+      .subscribe((data: Driver[]) => {
+        console.log(data);
+        this.showInfo = true;
+        this.driversList = data;
+        this.loadDataDialog(false);
+      });
   }
 }

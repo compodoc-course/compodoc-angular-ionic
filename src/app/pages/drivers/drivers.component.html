@@ -6,7 +6,7 @@
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
-          <th scope="col">Driver</th>
+          <th scope="col" colspan="2">Driver</th>
           <th scope="col">Date of Birth</th>
           <th scope="col">Nationality</th>
           <th scope="col">More info</th>
@@ -15,9 +15,11 @@
       <tbody>
         <ng-template ngFor let-driver [ngForOf]="driversList" let-i="index">
           <tr>
+            <td><strong>#{{ driver.permanentNumber }} </strong></td>
             <td>
-              <strong>#{{ driver.permanentNumber }} </strong>&nbsp;
-              <img class="profile-photo" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+              <img class="profile-photo" src="https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png" 
+              default="https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png"/>
+              <!--<img  src="https://www.w3schools.com/howto/img_avatar.png" alt="">-->
               {{driver.givenName}} {{driver.familyName}}  
             </td>
             <td>{{driver.dateOfBirth}}</td>

@@ -1,3 +1,20 @@
-<p>
-  seasons works!
-</p>
+<div class="card-columns">
+  <ng-template ngFor let-season [ngForOf]="seasons" let-i="index">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{season.season}}</h5>
+        <p class="card-text">
+          <a href="{{season.url}}" title="Web browser version" target="_blank">
+            <img src="../../../assets/internet.png" />
+          </a>
+          <a href="{{season.url | wikipediaUrlMobile}}" target="_blank" title="Mobile version">
+            <img src="../../../assets/mobile.png" />
+          </a>
+        </p>
+        <!--<p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>-->
+      </div>
+    </div>
+  </ng-template>
+</div>
