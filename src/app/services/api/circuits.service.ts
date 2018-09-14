@@ -15,4 +15,10 @@ export class CircuitsService {
       .getQuery(year + CIRCUITS_URLS.SELECT)
       .pipe(map(data => data['MRData'].CircuitTable.Circuits));
   }
+
+  loadListFromLocal() {
+    return this.request
+      .getJSON('./../../../assets/data/api/circuits2018.json')
+      .pipe(map(data => data['MRData'].CircuitTable.Circuits));
+  }
 }

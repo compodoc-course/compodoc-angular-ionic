@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DRIVERS_URLS, URL_LOCALHOST } from '../../constants/urls';
+import { DRIVERS_URLS } from '../../constants/urls';
 import { RequestService } from './request.service';
 import { map } from 'rxjs/internal/operators/map';
 
@@ -15,6 +15,11 @@ export class DriversService {
   listByYear(year) {
     console.log(year + DRIVERS_URLS.ALL_DRIVERS_SELECT);
     return this.request.getQuery(year + DRIVERS_URLS.ALL_DRIVERS_SELECT)
+      .pipe(map(data => data['MRData'].DriverTable.Drivers));
+  }
+
+  loadListFromLocal() {
+    return this.request.getJSON('./../../../assets/data/api/drivers2018.json')
       .pipe(map(data => data['MRData'].DriverTable.Drivers));
   }
 }
