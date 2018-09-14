@@ -37,6 +37,9 @@ import { GOOGLEMAPS } from '../../environments/api-keys';
 import { RoundPipe } from '../pipes/round.pipe';
 import { WikipediaUrlMobilePipe } from '../pipes/wikipedia-url-mobile.pipe';
 
+// Directives
+import { DefaultImageDirective } from '../directives/default-image.directive';
+
 const COMPONENTS = [
   GoogleMapsComponent,
   SeasonsComponent,
@@ -57,7 +60,9 @@ const COMPONENTS = [
 
 const PIPES = [RoundPipe, WikipediaUrlMobilePipe];
 
-const DECLARATIONS = [...[PagesComponent], ...PIPES, ...COMPONENTS];
+const DIRECTIVES = [ DefaultImageDirective ];
+
+const DECLARATIONS = [...[PagesComponent], ...PIPES, ...DIRECTIVES, ...COMPONENTS];
 
 @NgModule({
   imports: [
