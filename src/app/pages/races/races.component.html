@@ -1,3 +1,31 @@
-<p>
-  races works!
-</p>
+<div class="card-columns" *ngIf="showInfo">
+  <ng-template ngFor let-race [ngForOf]="racesList" let-i="index">
+    <div class="card">
+      <img class="card-img-top" style="width:100%" src="{{ race.Circuit.Location | googleStaticMapUrl }}"
+        alt="Card image">
+      <div class="card-body">
+        <h5 class="card-title">#{{i+1}} {{race.raceName}}</h5>
+        <p class="card-text">
+          <i class="far fa-calendar-alt"></i>&nbsp; {{race.date}}
+          <br/> 
+          <i class="fas fa-map-marker-alt"></i> 
+          <a href="{{ race.Circuit.Location | googleMapsUrl }}" target="_blank">
+             {{ race.Circuit.Location | locationText }}
+          </a>
+          <br/><br/>
+          <i class="fas fa-info"></i>
+          <span> + Info: </span><br/>
+          <a href="{{race.url}}" title="Web browser version" target="_blank">
+            <img src="../../../assets/internet.png" />
+          </a>
+          <a href="{{race.url | wikipediaUrlMobile}}" target="_blank" title="Mobile version">
+            <img src="../../../assets/mobile.png" />
+          </a>
+        </p>
+        <!--<p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>-->
+      </div>
+    </div>
+  </ng-template>
+</div>
