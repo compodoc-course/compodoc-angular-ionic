@@ -15,4 +15,6 @@ export interface MarkerIF {
      * Locality to celebrate Grand Prix. For example: Barcelona (Spain)
      */
     locality: string;
+    color?: string;
+    label?: string;
 }
