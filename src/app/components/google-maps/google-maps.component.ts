@@ -15,8 +15,6 @@ export class GoogleMapsComponent implements OnInit {
   circuitsData: Circuit[];
   constructor() {}
   ngOnInit() {
-    console.log(this.circuitsData.length);
-
     if (this.circuitsData.length === 0) {
       this.markers.push(
         new Marker(
