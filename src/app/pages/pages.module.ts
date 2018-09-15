@@ -36,9 +36,13 @@ import { GOOGLEMAPS } from '../../environments/api-keys';
 // Pipes
 import { RoundPipe } from '../pipes/round.pipe';
 import { WikipediaUrlMobilePipe } from '../pipes/wikipedia-url-mobile.pipe';
+import { GoogleStaticMapUrlPipe } from '../pipes/google-static-map-url.pipe';
+import { GoogleMapsUrlPipe } from '../pipes/google-maps-url.pipe';
+import { LocationTextPipe } from '../pipes/location-text.pipe';
 
 // Directives
 import { DefaultImageDirective } from '../directives/default-image.directive';
+
 
 const COMPONENTS = [
   GoogleMapsComponent,
@@ -58,7 +62,13 @@ const COMPONENTS = [
   SupportComponent
 ];
 
-const PIPES = [RoundPipe, WikipediaUrlMobilePipe];
+const PIPES = [
+  RoundPipe,
+  WikipediaUrlMobilePipe,
+  GoogleStaticMapUrlPipe,
+  GoogleMapsUrlPipe,
+  LocationTextPipe
+];
 
 const DIRECTIVES = [ DefaultImageDirective ];
 
