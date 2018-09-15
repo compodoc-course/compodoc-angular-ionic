@@ -61,7 +61,6 @@ export class CircuitsComponent implements OnInit {
     this._circuitService
       .loadListFromLocal()
       .subscribe((data: Circuit[]) => {
-        console.log(data);
         this.showInfo = true;
         this.circuitsList = data;
         this.loadDataDialog(false);
