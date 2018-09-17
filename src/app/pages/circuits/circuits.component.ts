@@ -3,6 +3,10 @@ import { SharedService } from '../../services/shared.service';
 import { AlertService } from '../../services/alert.service';
 import { CircuitsService } from '../../services/api/circuits.service';
 import { Circuit } from '../../interfaces/circuit.interface';
+import swal from 'sweetalert2';
+import { GoogleStaticMapUrlPipe } from '../../pipes/google-static-map-url.pipe';
+import { LocationTextPipe } from '../../pipes/location-text.pipe';
+import { GoogleMapsUrlPipe } from '../../pipes/google-maps-url.pipe';
 
 @Component({
   selector: 'app-circuits',
@@ -62,8 +66,32 @@ export class CircuitsComponent implements OnInit {
       .loadListFromLocal()
       .subscribe((data: Circuit[]) => {
         this.showInfo = true;
+        this.selectPageService.setSelectPage(`Circuits List to  ${this.selectYear} season`);
         this.circuitsList = data;
         this.loadDataDialog(false);
       });
+  }
+
+  infoAlert(circuit: Circuit) {
+
+    const googleStaticMapUrl = new GoogleStaticMapUrlPipe().transform(circuit.Location, `h`, `red`, `C`, 1000, 300, 5);
+    const locationText = new LocationTextPipe().transform(circuit.Location);
+    const googleMapsUrl = new GoogleMapsUrlPipe().transform(circuit.Location);
+    swal({
+      title: `<br/><strong> ${circuit.circuitName} </strong>`,
+      html: `Location: ${locationText} <br/><br/>
+        <img class="card-img-top animated fadeIn" style="width:100%" src="${googleStaticMapUrl}"
+        alt="Card image">
+        <br/><br/>
+        <a href="${googleMapsUrl}" target="_blank">
+        Open in Google Maps</a>`,
+      showCloseButton: false,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: 'Close',
+      confirmButtonAriaLabel: 'Thumbs up, great!',
+      cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+      cancelButtonAriaLabel: 'Thumbs down'
+    });
   }
 }
