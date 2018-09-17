@@ -1,8 +1,8 @@
-<div class="card mb-3" *ngIf="showInfo">
-  <!--<div class="card-header">
+<!--<div class="card mb-3 animated fadeIn" *ngIf="showInfo">
+<div class="card-header">
     <i class="fa fa-table"></i> Drivers List to {{ selectYear }} season
   </div>-->
-  <div class="card-body table-responsive">
+  <!--<div class="card-body table-responsive">
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
@@ -14,16 +14,15 @@
       </thead>
       <tbody>
         <ng-template ngFor let-driver [ngForOf]="driversList" let-i="index">
-          <tr>
+          <tr class="animated fadeIn">
             <td><strong>#{{ driver.permanentNumber }} </strong></td>
             <td>
               <img class="profile-photo" src="https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png" 
               default="https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png"/>
-              <!--<img  src="https://www.w3schools.com/howto/img_avatar.png" alt="">-->
               {{driver.givenName}} {{driver.familyName}}  
             </td>
-            <td>{{driver.dateOfBirth}}</td>
-            <td>
+            <td align="center">{{driver.dateOfBirth}}</td>
+            <td align="center">
               <img src="https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png" default="../../../assets/img/Unknown.png"
               />
             </td>
@@ -39,22 +38,32 @@
         </ng-template>
       </tbody>
     </table>
-    <!--<nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" [ngClass]="{ 'disabled': currentPage == 1 }" (click)="selectPage(currentPage - 1)" tabindex="-1">Previous</a>
-        </li>
-        <ng-template ngFor let-page [ngForOf]="pages" let-i="index">
-          <li class="page-item">
-            <a class="page-link" [ngClass]="{'select': currentPage == i + 1}" (click)="selectPage(i + 1)">{{ i + 1}}</a>
-          </li>
-        </ng-template>
-        <li class="page-item">
-          <a class="page-link" [ngClass]="{'disabled': currentPage == pages.length }" (click)="selectPage(currentPage + 1)">Next</a>
-        </li>
-      </ul>
-    </nav>-->
-
   </div>
   <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>-->
+
+<div class="card-columns animated fadeIn">
+  <ng-template ngFor let-driver [ngForOf]="driversList" let-i="index">
+    <div class="card">
+      <div class="card-body">
+        <img class="profile-photo" src="https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png" default="https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png"
+        />&nbsp;
+        <img src="https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png" default="../../../assets/img/Unknown.png"
+        />&nbsp;<strong>#{{ driver.permanentNumber }} </strong>
+        <h5 class="card-title">{{driver.givenName}} {{driver.familyName}}</h5>
+        <p class="card-text">
+          <span>{{driver.dateOfBirth}}</span><br/>
+          <a href="{{driver.url}}" title="Web browser version" target="_blank">
+            <img src="../../../assets/internet.png" />
+          </a>
+          <a href="{{driver.url | wikipediaUrlMobile}}" target="_blank" title="Mobile version">
+            <img src="../../../assets/mobile.png" />
+          </a>
+        </p>
+        <!--<p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>-->
+      </div>
+    </div>
+  </ng-template>
 </div>
