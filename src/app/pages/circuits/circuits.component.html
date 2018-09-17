@@ -1,5 +1,5 @@
 <app-google-maps *ngIf="showInfo" [circuitsData]="circuitsList"></app-google-maps>
-<div class="card mb-3" *ngIf="showInfo">
+<div class="card mb-3 animated fadeIn" *ngIf="showInfo">
   <!--<div class="card-header">
     <i class="fa fa-table"></i> circuits List to {{ selectYear }} season
   </div>-->
@@ -16,12 +16,10 @@
         <ng-template ngFor let-circuit [ngForOf]="circuitsList" let-i="index">
           <tr>
             <td>{{circuit.circuitName}}</td>
-            <td>
-              <a href="{{ circuit.Location | googleMapsUrl }}" target="_blank">
-                 {{ circuit.Location | locationText }}
-              </a>
+            <td align="center">
+              <button type="button" class="btn btn-info" (click)="infoAlert(circuit)">{{ circuit.Location | locationText }}</button>
             </td>
-            <td>
+            <td align="center">
               <a href="{{circuit.url}}" title="Web browser version" target="_blank">
                 <img src="../../../assets/internet.png" />
               </a>

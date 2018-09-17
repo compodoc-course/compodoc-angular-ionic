@@ -1,6 +1,6 @@
 <div class="card-columns" *ngIf="showInfo">
   <ng-template ngFor let-race [ngForOf]="racesList" let-i="index">
-    <div class="card">
+    <div class="card animated fadeIn">
       <img class="card-img-top" style="width:100%" src="{{ race.Circuit.Location | googleStaticMapUrl }}"
         alt="Card image">
       <div class="card-body">

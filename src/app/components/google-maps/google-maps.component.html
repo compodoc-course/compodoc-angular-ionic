@@ -1,4 +1,4 @@
-<agm-map [latitude]="40.416775" [longitude]="-3.703790" [zoom]="3">
+<agm-map [latitude]="40.416775" [longitude]="-3.703790" [zoom]="3" class="animated fadeIn">
   <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng">
     <agm-info-window>
       <strong>{{m.name}}</strong>
