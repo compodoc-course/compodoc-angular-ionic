@@ -44,8 +44,8 @@
 
 <div class="card-columns animated fadeIn">
   <ng-template ngFor let-driver [ngForOf]="driversList" let-i="index">
-    <div class="card">
-      <div class="card-body">
+    <div class="card" (click)="infoAlert(driver)">
+      <div class="card-body" >
         <img class="profile-photo" src="https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png" default="https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png"
         />&nbsp;
         <img src="https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png" default="../../../assets/img/Unknown.png"

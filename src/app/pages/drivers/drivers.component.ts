@@ -3,6 +3,7 @@ import { SharedService } from '../../services/shared.service';
 import { DriversService } from '../../services/api/drivers.service';
 import { Driver } from '../../interfaces/driver.interface';
 import { AlertService } from '../../services/alert.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-drivers',
@@ -27,7 +28,10 @@ export class DriversComponent implements OnInit {
 
   private loadDataDialog(open: boolean = true) {
     if (open) {
-      this._alertService.loadData(`Load ${this.selectYear} season drivers!!`, 'Wait a moment please!!');
+      this._alertService.loadData(
+        `Load ${this.selectYear} season drivers!!`,
+        'Wait a moment please!!'
+      );
     } else {
       this._alertService.closeAlert();
     }
@@ -60,13 +64,26 @@ export class DriversComponent implements OnInit {
   loadDataFromAssets() {
     this.selectYear = '2018';
     this.loadDataDialog();
-    this._driversService
-      .loadListFromLocal()
-      .subscribe((data: Driver[]) => {
-        console.log(data);
-        this.showInfo = true;
-        this.driversList = data;
-        this.loadDataDialog(false);
-      });
+    this._driversService.loadListFromLocal().subscribe((data: Driver[]) => {
+      console.log(data);
+      this.showInfo = true;
+      this.driversList = data;
+      this.loadDataDialog(false);
+    });
+  }
+
+  infoAlert(driver: Driver) {
+
+    swal({
+      title: `<br/><strong> ${driver.givenName} ${driver.familyName} </strong>`,
+      html: ``,
+      showCloseButton: false,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: 'Close',
+      confirmButtonAriaLabel: 'Thumbs up, great!',
+      cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+      cancelButtonAriaLabel: 'Thumbs down'
+    });
   }
 }

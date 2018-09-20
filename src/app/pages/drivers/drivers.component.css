@@ -1,3 +1,7 @@
 .profile-photo {
     max-width: 40px !important;
 }
+
+.card {
+    cursor: pointer;
+}
