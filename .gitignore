@@ -42,4 +42,5 @@ package-lock.json
 
 # Others
 /traslate-template-files
-src/environments/api-keys.ts
+/src/environments/api-keys.ts
+/documentation
