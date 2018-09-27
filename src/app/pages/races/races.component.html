@@ -2,7 +2,7 @@
   <ng-template ngFor let-race [ngForOf]="racesList" let-i="index">
     <div class="card animated fadeIn">
       <img class="card-img-top" style="width:100%" src="{{ race.Circuit.Location | googleStaticMapUrl }}"
-        alt="Card image">
+        alt="{{race.raceName}} circuit image. Please add Google Maps API KEY!!!">
       <div class="card-body">
         <h5 class="card-title">#{{i+1}} {{race.raceName}}</h5>
         <p class="card-text">
