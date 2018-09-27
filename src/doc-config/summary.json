@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Starter Bootstrap Admin Angular Template",
+    "file": "init.md"
+  },
+  {
+    "title": "Features",
+    "file": "features/init.md",
+    "children": [
+      {
+        "title": "Functions",
+        "file": "features/functions.md"
+      }
+    ]
+  }
+]
