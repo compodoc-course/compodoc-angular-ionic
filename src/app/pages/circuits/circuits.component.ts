@@ -25,21 +25,34 @@ export class CircuitsComponent implements OnInit {
 
   ngOnInit() {
     this.showInfo = false;
-    this.selectPageService.setSelectPage('circuits');
+    this.selectPageService.setSelectPage(`circuits`);
     this.loadDataFromAssets();
   }
-
+  /**
+   * @example
+   * Example to open dialog with pass info.
+   * loadDataDialog(true)
+   *
+   * @param {boolean }open use boolean value to open or close select load data dialog
+   */
   private loadDataDialog(open: boolean = true) {
     if (open) {
       this._alertService.loadData(
         `Load ${this.selectYear} season circuits list!!`,
-        'Wait a moment please!!'
+        `Wait a moment please!!`
       );
     } else {
       this._alertService.closeAlert();
     }
   }
-
+  /**
+   * @example
+   * This is a good example. Add years from 1950 to 2018
+   * selectYearCircuits("2017")
+   *
+   * @param {string} year  The year to take select circuits to show
+   * @returns
+   */
   selectYearCircuits(year: string = String(new Date().getFullYear())) {
     this.selectYear = year;
     this.loadDataDialog();
@@ -57,31 +70,38 @@ export class CircuitsComponent implements OnInit {
   }
 
   /**
-  * Take data from a local file in json format
-  */
+   * Take data from a local file in json format
+   */
   loadDataFromAssets() {
     this.selectYear = '2018';
     this.loadDataDialog();
-    this._circuitService
-      .loadListFromLocal()
-      .subscribe((data: Circuit[]) => {
-        this.showInfo = true;
-        this.selectPageService.setSelectPage(`Circuits List to  ${this.selectYear} season`);
-        this.circuitsList = data;
-        this.loadDataDialog(false);
-      });
+    this._circuitService.loadListFromLocal().subscribe((data: Circuit[]) => {
+      this.showInfo = true;
+      this.selectPageService.setSelectPage(
+        `Circuits List to  ${this.selectYear} season`
+      );
+      this.circuitsList = data;
+      this.loadDataDialog(false);
+    });
   }
 
   infoAlert(circuit: Circuit) {
-
-    const googleStaticMapUrl = new GoogleStaticMapUrlPipe().transform(circuit.Location, `h`, `red`, `C`, 1000, 300, 5);
+    const googleStaticMapUrl = new GoogleStaticMapUrlPipe().transform(
+      circuit.Location,
+      `h`,
+      `red`,
+      `C`,
+      1000,
+      300,
+      5
+    );
     const locationText = new LocationTextPipe().transform(circuit.Location);
     const googleMapsUrl = new GoogleMapsUrlPipe().transform(circuit.Location);
     swal({
       title: `<br/><strong> ${circuit.circuitName} </strong>`,
       html: `Location: ${locationText} <br/><br/>
         <img class="card-img-top animated fadeIn" style="width:100%" src="${googleStaticMapUrl}"
-        alt="Card image">
+        alt="${circuit.circuitName} circuit image">
         <br/><br/>
         <a href="${googleMapsUrl}" target="_blank">
         Open in Google Maps</a>`,
