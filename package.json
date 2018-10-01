@@ -14,7 +14,8 @@
     "compodoc-laravel": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --theme laravel",
     "compodoc-material": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --theme material",
     "compodoc-readthedocs": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --theme readthedocs",
-    "compodoc-with-additional-doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --includes src/doc-config/"
+    "compodoc-with-additional-doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --includes src/doc-config/",
+    "compodoc-no-logo": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --hideGenerator"
   },
   "private": true,
   "dependencies": {
