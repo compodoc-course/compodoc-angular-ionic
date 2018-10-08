@@ -21,3 +21,22 @@
     padding: 8px 0;
     margin-top: 215px;
 }
+
+/*####################################################*/
+/*          CUSTOM THEME OPTIONS
+/*####################################################*/
+
+/* Estilo de la sección del título */
+.title {
+    background: red;
+}
+
+/* Estilo de la sección de búsqueda */
+#book-search-input {
+    background: greenyellow
+}
+
+/* Cambio de apariencia en el menú principal */
+.menu ul.list {
+    background: aliceblue;
+}
