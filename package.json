@@ -17,7 +17,8 @@
     "compodoc-with-additional-doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --includes src/doc-config/",
     "compodoc-no-logo": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --hideGenerator -y src/custom-style/",
     "compodoc-c-favicon-title": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --customFavicon src/favicon.ico -n \"Compodoc Angular / Ionic Docum.\" -y src/custom-style/",
-    "compodoc-custom-theme": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --customFavicon src/favicon.ico -n \"Compodoc Angular / Ionic Docum.\" -y src/custom-style/"
+    "compodoc-custom-theme": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --customFavicon src/favicon.ico -n \"Compodoc Angular / Ionic Docum.\" -y src/custom-style/",
+    "compodoc-tips": "./node_modules/.bin/compodoc -p src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
