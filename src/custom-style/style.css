@@ -5,3 +5,19 @@
 @import "./compodoc.css";
 @import "./prism.css";
 @import "./tablesort.css";
+
+.menu {
+    background: url(img/cup.png) no-repeat;
+    background-size: 180px;
+    background-position-x: 50%;
+    background-position-y: 2%;
+}
+
+.menu ul.list {
+    background: whitesmoke;
+}
+
+.menu .title {
+    padding: 8px 0;
+    margin-top: 215px;
+}
