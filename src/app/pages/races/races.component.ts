@@ -38,7 +38,7 @@ export class RacesComponent implements OnInit {
   /**
    * Take data from a local file in json format
    */
-  loadDataFromAssets() {
+  private loadDataFromAssets() {
     this.selectYear = `2018`;
     this.loadDataDialog();
     this._racesService.loadListFromLocal().subscribe((data: Race[]) => {

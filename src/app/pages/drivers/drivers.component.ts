@@ -87,7 +87,7 @@ export class DriversComponent implements OnInit {
   /**
    * Take data from a local file in json format
    */
-  loadDataFromAssets() {
+  protected loadDataFromAssets() {
     this.selectYear = `2018`;
     this.loadDataDialog();
     this._driversService.loadListFromLocal().subscribe((data: Driver[]) => {
