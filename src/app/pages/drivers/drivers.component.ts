@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 import { DriversService } from '../../services/api/drivers.service';
 import { Driver } from '../../interfaces/driver.interface';
@@ -10,7 +10,7 @@ import swal from 'sweetalert2';
   templateUrl: `./drivers.component.html`,
   styleUrls: [`./drivers.component.css`]
 })
-export class DriversComponent implements OnInit {
+export class DriversComponent implements OnInit, OnDestroy {
   /**
    * @ignore
    */
@@ -35,6 +35,12 @@ export class DriversComponent implements OnInit {
     this.showInfo = false;
     this.selectPageService.setSelectPage(`drivers`);
     this.loadDataFromAssets();
+  }
+
+
+  ngOnDestroy(): void {
+    this.showInfo = false;
+    this.driversList = [];
   }
 
   /**

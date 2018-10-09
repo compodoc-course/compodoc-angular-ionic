@@ -20,7 +20,8 @@
     "compodoc-custom-theme": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --customFavicon src/favicon.ico -n \"Compodoc Angular / Ionic Docum.\" -y src/custom-style/",
     "compodoc-tips": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
     "compodoc-no-private-protected": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disablePrivate --disableProtected",
-    "compodoc-no-source-dom-tree": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disableSourceCode --disableDomTree"
+    "compodoc-no-source-dom-tree": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disableSourceCode --disableDomTree",
+    "compodoc-disable-life-cycle-hooks": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disableLifeCycleHooks"
   },
   "private": true,
   "dependencies": {
