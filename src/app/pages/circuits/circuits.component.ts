@@ -9,9 +9,9 @@ import { LocationTextPipe } from '../../pipes/location-text.pipe';
 import { GoogleMapsUrlPipe } from '../../pipes/google-maps-url.pipe';
 
 @Component({
-  selector: 'app-circuits',
-  templateUrl: './circuits.component.html',
-  styleUrls: ['./circuits.component.css']
+  selector: `app-circuits`,
+  templateUrl: `./circuits.component.html`,
+  styleUrls: [`./circuits.component.css`]
 })
 export class CircuitsComponent implements OnInit {
   showInfo: boolean;
@@ -46,9 +46,11 @@ export class CircuitsComponent implements OnInit {
     }
   }
   /**
+   * Take data from server. More info in:
+   *  [Circuits List API Documentation]{@link https://ergast.com/mrd/methods/circuits/}
    * @example
    * This is a good example. Add years from 1950 to 2018
-   * selectYearCircuits("2017")
+   * selectYearCircuits(2017)
    *
    * @param {string} year  The year to take select circuits to show
    * @returns
@@ -73,7 +75,7 @@ export class CircuitsComponent implements OnInit {
    * Take data from a local file in json format
    */
   loadDataFromAssets() {
-    this.selectYear = '2018';
+    this.selectYear = `2018`;
     this.loadDataDialog();
     this._circuitService.loadListFromLocal().subscribe((data: Circuit[]) => {
       this.showInfo = true;
@@ -85,6 +87,10 @@ export class CircuitsComponent implements OnInit {
     });
   }
 
+  /**
+   * @param {Circuit} circuit  Select circuit object dialog info
+   * @returns
+   */
   infoAlert(circuit: Circuit) {
     const googleStaticMapUrl = new GoogleStaticMapUrlPipe().transform(
       circuit.Location,
@@ -108,10 +114,10 @@ export class CircuitsComponent implements OnInit {
       showCloseButton: false,
       showCancelButton: false,
       focusConfirm: false,
-      confirmButtonText: 'Close',
-      confirmButtonAriaLabel: 'Thumbs up, great!',
-      cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
-      cancelButtonAriaLabel: 'Thumbs down'
+      confirmButtonText: `Close`,
+      confirmButtonAriaLabel: `Thumbs up, great!`,
+      cancelButtonText: `<i class="fa fa-thumbs-down"></i>`,
+      cancelButtonAriaLabel: `Thumbs down`
     });
   }
 }
