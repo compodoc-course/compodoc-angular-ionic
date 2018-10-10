@@ -11,8 +11,22 @@ export class GoogleStaticMapUrlPipe implements PipeTransform {
 
   STATICMAP = `https://maps.googleapis.com/maps/api/staticmap?`;
 
-  // value | googleStaticMapUrl:<location: Location>:<type(r, t, h, s)><markerColor><label>
-
+  /**
+   * Pass location object data to generate correct url to show location static map image
+   * @example
+   * Use example to generate static map image
+   * value | googleStaticMapUrl:<location: Location>:<type(r, t, h, s)><markerColor><label>
+   * or
+   * const googleStaticMapUrl = new GoogleStaticMapUrlPipe().transform( circuit.Location, `h`, `red`, `C`, 1000, 300, 5 );
+   *
+   * @param { Location } location : Select location coordinates
+   * @param { String } type : Generate map type -> roadmap, satellite, hybrid or terrain
+   * @param { String } markerColor: Marker color. Input color name or hexadecimal value
+   * @param { String } label: Marker label.
+   * @param { number } width: Map static image with in pixeles
+   * @param { number } height : Map static image height in pixeles
+   * @param { number } zoom : Map static image zoom
+   */
   transform(
     location: Location,
     type: string = ``,
@@ -33,14 +47,26 @@ export class GoogleStaticMapUrlPipe implements PipeTransform {
     }center=${locate}${zoomValue}${size}${mapType}${markers}${key}`;
   }
 
+  /**
+   * Take Google maps api key from environment
+   */
   private getKey(): string {
     return `&key=${GOOGLEMAPS}`;
   }
 
+  /**
+   * Create url properties size with width and height
+   * @param width Image width
+   * @param height Image height
+   */
   private getSize(width: number, height: number): string {
     return `&size=${width}x${height}`;
   }
 
+  /**
+   * Create map type dependending input type
+   * @param type Asign map type to show in image
+   */
   private getMapType(type: string): string {
     const mapType = `&maptype=`;
     // roadmap, satellite, hybrid, and terrain
@@ -55,6 +81,13 @@ export class GoogleStaticMapUrlPipe implements PipeTransform {
     }
   }
 
+  /**
+   * Asign input zoom. The value input must be > 5 or < 17
+   * For example:
+   * 7 -> 7
+   * 19 -> 13
+   * @param zoom Map zoom
+   */
   private getZoom(zoom: number) {
     if (zoom < 5 || zoom > 16) {
       zoom = 13;
