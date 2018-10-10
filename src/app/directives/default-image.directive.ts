@@ -9,12 +9,20 @@ import { Directive, Input } from '@angular/core';
   }
 })
 export class DefaultImageDirective {
+  /**
+   * Input image path
+   */
   @Input()
   src: string;
-  // Add default image to show if not load correct select src
+  /**
+   * Add default image to show if not load correct select src
+   */
   @Input()
-  default = './assets/img/icons/birthday.png';
+  default = './assets/img/Unknown.png';
 
+  /**
+   * Use if error in load src to replace image with default image
+   */
   updateUrl() {
     this.src = this.default;
   }
