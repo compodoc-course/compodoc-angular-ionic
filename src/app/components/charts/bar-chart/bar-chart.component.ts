@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+/**
+ * @ignore
+ */
 @Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
