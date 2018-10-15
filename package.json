@@ -21,7 +21,8 @@
     "compodoc-tips": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
     "compodoc-no-private-protected": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disablePrivate --disableProtected",
     "compodoc-no-source-dom-tree": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disableSourceCode --disableDomTree",
-    "compodoc-disable-life-cycle-hooks": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disableLifeCycleHooks"
+    "compodoc-disable-life-cycle-hooks": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --disableLifeCycleHooks",
+    "serve-docs": "compodoc -s src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
