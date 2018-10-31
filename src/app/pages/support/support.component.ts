@@ -8,9 +8,7 @@ import { SharedService } from '../../services/shared.service';
 })
 export class SupportComponent implements OnInit {
   constructor(private selectPageService: SharedService) {}
-  /**
-   * @ignore
-   */
+
   ngOnInit() {
     this.selectPageService.setSelectPage('Support');
   }

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class WikipediaUrlMobilePipe implements PipeTransform {
 
-  transform(value: any): any {
+  transform(value: string): string {
     return value.replace('wikipedia', 'm.wikipedia');
   }
 

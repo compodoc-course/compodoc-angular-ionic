@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 import { DriversService } from '../../services/api/drivers.service';
 import { Driver } from '../../interfaces/driver.interface';
@@ -10,47 +10,33 @@ import swal from 'sweetalert2';
   templateUrl: `./drivers.component.html`,
   styleUrls: [`./drivers.component.css`]
 })
-export class DriversComponent implements OnInit, OnDestroy {
+export class DriversComponent implements OnInit, OnDestroy, AfterViewInit {
   /**
    * @ignore
    */
   selectYear: string;
-  /**
-   * @ignore
-   */
   driversList: Driver[];
-  /**
-   * @ignore
-   */
   showInfo: boolean;
   constructor(
     private selectPageService: SharedService,
     private _driversService: DriversService,
     private _alertService: AlertService
   ) {}
-  /**
-   * @ignore
-   */
+
   ngOnInit() {
     this.showInfo = false;
     this.selectPageService.setSelectPage(`drivers`);
     this.loadDataFromAssets();
   }
 
-
-  ngOnDestroy(): void {
-    this.showInfo = false;
-    this.driversList = [];
+  ngOnDestroy() {
+    console.log('Destroy');
   }
 
-  /**
-   * Function to show / hide loading data loading.
-   * @example
-   * This is a good example to show loading data dialog
-   * loadDataDialog(true)
-   *
-   * @param open Value to specify if open load data dialog
-   */
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
   private loadDataDialog(open: boolean = true) {
     if (open) {
       this._alertService.loadData(
@@ -63,16 +49,12 @@ export class DriversComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Take data from server. More info in:
-   *  [Drivers List API Documentation]{@link https://ergast.com/mrd/methods/drivers/}
-   *
+   * Take data from server
    * @example
-   * This is a good example to show 2018 drivers list
-   * selectYearDrivers(2018)
-   *
-   * @param {string} year  Select year value
+   * This is a good example
+   * selectYearDrivers(2018) (input data is string!!!)
    */
-  selectYearDrivers(year: string = String(new Date().getFullYear())) {
+  protected selectYearDrivers(year: string = String(new Date().getFullYear())) {
     this.selectYear = year;
     this.loadDataDialog();
     this._driversService.listByYear(year).subscribe(
@@ -93,7 +75,7 @@ export class DriversComponent implements OnInit, OnDestroy {
   /**
    * Take data from a local file in json format
    */
-  protected loadDataFromAssets() {
+  loadDataFromAssets() {
     this.selectYear = `2018`;
     this.loadDataDialog();
     this._driversService.loadListFromLocal().subscribe((data: Driver[]) => {
@@ -105,8 +87,10 @@ export class DriversComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * @param {Driver} driver  Select driver object
-   * @returns
+   * [Driver interface info]{@link Driver}
+   *
+   * [See more information about drivers in API]{@link https://ergast.com/mrd/methods/drivers/}
+   * @param driver
    */
   infoAlert(driver: Driver) {
     swal({
@@ -117,7 +101,7 @@ export class DriversComponent implements OnInit, OnDestroy {
       focusConfirm: false,
       confirmButtonText: `Close`,
       confirmButtonAriaLabel: `Thumbs up, great!`,
-      cancelButtonText: `<i class="fa fa-thumbs-down"></i>`,
+      cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
       cancelButtonAriaLabel: `Thumbs down`
     });
   }
