@@ -5,8 +5,6 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-
-
 const COMPONENTS = [
     LoginComponent,
     RegisterComponent,

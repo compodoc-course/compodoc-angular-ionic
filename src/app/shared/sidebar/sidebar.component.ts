@@ -9,6 +9,11 @@ import { SidebarService } from '../../services/sidebar.service';
 export class SidebarComponent {
   findClassToggled = 'sidenav-toggled';
   toggledSideNav: boolean;
+
+  /**
+   * Load sidebar menu items and check if sidebar toggled or no
+   * @param _sidebar Service to take sidebar items info
+   */
   constructor( public _sidebar: SidebarService) {
     if (localStorage.getItem('toggleSideNav') === '1') {
       document
@@ -27,6 +32,9 @@ export class SidebarComponent {
     console.log('hello');
   }
 
+  /**
+   * Function to toggled or expanse sidebar section and save config in local storage to future
+   */
   toggled() {
     const find = localStorage.getItem('toggleSideNav');
     if (find === '1') {

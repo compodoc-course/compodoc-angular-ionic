@@ -19,11 +19,18 @@ export class RacesComponent implements OnInit {
     private _alertService: AlertService
   ) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
     this.selectPageService.setSelectPage(`races`);
     this.loadDataFromAssets();
   }
 
+  /**
+   * load/close dialog function
+   * @param open pass boolean to specify if dialog open or close
+   */
   private loadDataDialog(open: boolean = true) {
     if (open) {
       this._alertService.loadData(
@@ -36,7 +43,7 @@ export class RacesComponent implements OnInit {
   }
 
   /**
-   * Take data from a local file in json format
+   * Take data from a local file in json format. Select year is 2018
    */
   private loadDataFromAssets() {
     this.selectYear = `2018`;

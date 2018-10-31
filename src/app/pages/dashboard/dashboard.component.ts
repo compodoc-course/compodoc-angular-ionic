@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../../services/shared.service';
 import { LocalStorageService } from '../../services/local-storage.service';
-
+/**
+ * @ignore
+ */
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

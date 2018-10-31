@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
     private localStorage: LocalStorageService
   ) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
     const user = this.localStorage.takeUserLoginData();
     if (user !== null) {
@@ -26,6 +29,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  /**
+   * Make login function.
+   * Only take local data and storage in local with "user_credentials" key and after go to dashboard route
+   */
   makeLogin() {
     this.localStorage.saveDataInLocal(
       'user_credentials',

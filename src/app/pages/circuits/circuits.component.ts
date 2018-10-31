@@ -23,6 +23,9 @@ export class CircuitsComponent implements OnInit {
     private _circuitService: CircuitsService
   ) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
     this.showInfo = false;
     this.selectPageService.setSelectPage(`circuits`);

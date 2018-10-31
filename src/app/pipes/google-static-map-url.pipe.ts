@@ -6,9 +6,10 @@ import { GOOGLEMAPS } from '../../environments/api-keys';
   name: `googleStaticMapUrl`
 })
 export class GoogleStaticMapUrlPipe implements PipeTransform {
-  // Documentation:
-  // https://developers.google.com/maps/documentation/maps-static/dev-guide
-
+  /**
+   *  Documentation:
+   * https://developers.google.com/maps/documentation/maps-static/dev-guide
+   */
   STATICMAP = `https://maps.googleapis.com/maps/api/staticmap?`;
 
   /**

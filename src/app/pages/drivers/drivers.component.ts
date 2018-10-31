@@ -37,7 +37,9 @@ export class DriversComponent implements OnInit, OnDestroy {
     this.loadDataFromAssets();
   }
 
-
+  /**
+   * @ignore
+   */
   ngOnDestroy(): void {
     this.showInfo = false;
     this.driversList = [];
