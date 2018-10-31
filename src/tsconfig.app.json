@@ -5,11 +5,12 @@
     "module": "es2015",
     "types": []
   },
-  
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts",
-    "**/*.interface.ts",
-    "**/capitalize.pipe.ts"
+    "**/capitalize.pipe.ts",
+    "**/round.pipe.ts",
+    "**/circuit.interface.ts",
+    "**/driver.interface.ts"
   ]
 }
