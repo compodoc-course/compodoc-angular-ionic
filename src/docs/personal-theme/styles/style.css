@@ -1,0 +1,47 @@
+@import "./reset.css";
+@import "./bootstrap.min.css";
+@import "./bootstrap-card.css";
+@import "./font-awesome.min.css";
+@import "./compodoc.css";
+@import "./prism.css";
+@import "./tablesort.css";
+
+.menu .title {
+    padding: 8px 0;
+    margin-top: 200px;
+}
+
+.menu {
+    background: url('screen.png') no-repeat;
+    background-size: 150px;
+    background-position-x: 50%;
+    background-position-y: 5%;
+}
+
+.menu ul.list {
+    background: whitesmoke;
+}
+
+.title {
+    background: aquamarine;
+    color: white !important;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: green;
+}
+
+code {
+    color: #1a6aa7;
+}
+
+a:focus {
+    color: #d8d01b;
+}
