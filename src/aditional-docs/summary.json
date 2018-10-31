@@ -1,0 +1,38 @@
+[
+  {
+    "title": "A TITLE",
+    "file": "a-file.md"
+  },
+  {
+    "title": "B TITLE",
+    "file": "b-file.md",
+    "children": [
+        {
+            "title": "B1 Title",
+            "file": "b/1.md",
+            "children": [
+                {
+                    "title": "B11 Title",
+                    "file": "b/b1/1.md"
+                },
+                {
+                    "title": "B12 Title",
+                    "file": "b/b1/2.md"
+                },
+                {
+                    "title": "B13 Title",
+                    "file": "b/b1/3.md"
+                }
+            ]
+        },
+        { 
+            "title": "B2 Title", 
+            "file": "b/2.md" 
+        },
+        {
+            "title": "B3 Title",
+            "file": "b/3.md"
+        }
+    ]
+  }
+]
