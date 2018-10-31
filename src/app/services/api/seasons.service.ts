@@ -9,6 +9,9 @@ import { map } from 'rxjs/internal/operators/map';
 export class SeasonsService {
   constructor(private request: RequestService) {}
 
+  /**
+   * Take all seasons list list
+   */
   list() {
     console.log(SEASONS_URLS.ALL_SEASONS_URL);
     return this.request
@@ -16,6 +19,9 @@ export class SeasonsService {
       .pipe(map(data => data['MRData'].SeasonTable.Seasons));
   }
 
+  /**
+   * Load all sessions data from JSON File
+   */
   loadListFromLocal() {
     return this.request
       .getJSON('./../../../assets/data/api/seasons.json')

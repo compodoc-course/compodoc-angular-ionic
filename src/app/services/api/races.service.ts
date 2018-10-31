@@ -18,6 +18,10 @@ export class RacesService {
   // ranking result of select race
   // https://ergast.com/api/f1/<year>/<number-race>/results.json
 
+  /**
+   * Take select year races list
+   * @param year select year races
+   */
   listByYear(year) {
     console.log(year + RACES_URLS.ALL_RACES_SELECT);
     return this.request
@@ -25,6 +29,9 @@ export class RacesService {
       .pipe(map(data => data['MRData'].RaceTable.Races));
   }
 
+  /**
+   * Load circuits list take by local reference. In this case load 2018 races
+   */
   loadListFromLocal() {
     return this.request
       .getJSON('./../../../assets/data/api/races2018.json')

@@ -8,10 +8,18 @@ import { Confirm } from '../interfaces/confirm.interface';
 export class AlertService {
   constructor() {}
 
+  /**
+   * Function to show alert message with good job info!
+   */
   successData() {
     swal('Good job!', 'You clicked the button!', 'success');
   }
 
+  /**
+   * Create dinamically alert with title and html content
+   * @param title String to contain title of alert
+   * @param html alert dialog html content to show info
+   */
   loadData(title, html) {
     swal({
       title: title,
@@ -29,10 +37,17 @@ export class AlertService {
     });
   }
 
+  /**
+   * Close select alert
+   */
   closeAlert() {
     swal.close();
   }
 
+  /**
+   * Take dinamically confirm data alert with pass confirm data
+   * @param data Confirm data object to generate alert
+   */
   confirm(data: Confirm) {
     return swal({
       title: data.title,

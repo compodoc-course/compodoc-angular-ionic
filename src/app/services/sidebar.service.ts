@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SidebarService {
+  /**
+   * Add Sidebar menu items
+   */
   menu: any = [
     {
       title: 'Current Year',
