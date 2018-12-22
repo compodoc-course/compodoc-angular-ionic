@@ -1,0 +1,847 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Compodoc Course</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/stripe.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Compodoc Course</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DriversComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/drivers/drivers.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-drivers</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./drivers.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./drivers.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#infoAlert">infoAlert</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadDataDialog">loadDataDialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#loadDataFromAssets">loadDataFromAssets</a>
+                            </li>
+                            <li>
+                                <a href="#selectYearDrivers">selectYearDrivers</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(selectPageService: <a href="../injectables/SharedService.html">SharedService</a>, _driversService: <a href="../injectables/DriversService.html">DriversService</a>, _alertService: <a href="../injectables/AlertService.html">AlertService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/pages/drivers/drivers.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>selectPageService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SharedService.html" target="_self" >SharedService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_driversService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/DriversService.html" target="_self" >DriversService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_alertService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AlertService.html" target="_self" >AlertService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="infoAlert"></a>
+                        <span class="name">
+                            <b>
+                            infoAlert
+                            </b>
+                            <a href="#infoAlert"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>infoAlert(driver: <a href="../interfaces/Driver.html">Driver</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/pages/drivers/drivers.component.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>driver</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/Driver.html" target="_self" >Driver</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Select driver object</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadDataDialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            loadDataDialog
+                            </b>
+                            <a href="#loadDataDialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>loadDataDialog(open: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/pages/drivers/drivers.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function to show / hide loading data loading.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>open</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>true</code>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>Value to specify if open load data dialog</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">This is a good example to show loading data dialog
+loadDataDialog(true)</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadDataFromAssets"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            loadDataFromAssets
+                            </b>
+                            <a href="#loadDataFromAssets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>loadDataFromAssets()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/app/pages/drivers/drivers.component.ts:98</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Take data from a local file in json format</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectYearDrivers"></a>
+                        <span class="name">
+                            <b>
+                            selectYearDrivers
+                            </b>
+                            <a href="#selectYearDrivers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>selectYearDrivers(year: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/pages/drivers/drivers.component.ts:77</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Take data from server. More info in:
+  <a href="https://ergast.com/mrd/methods/drivers/">Drivers List API Documentation</a></p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>year</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>String(new Date().getFullYear())</code>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>Select year value</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">This is a good example to show 2018 drivers list
+selectYearDrivers(2018)</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { SharedService } from &#x27;../../services/shared.service&#x27;;
+import { DriversService } from &#x27;../../services/api/drivers.service&#x27;;
+import { Driver } from &#x27;../../interfaces/driver.interface&#x27;;
+import { AlertService } from &#x27;../../services/alert.service&#x27;;
+import swal from &#x27;sweetalert2&#x27;;
+
+@Component({
+  selector: &#x60;app-drivers&#x60;,
+  templateUrl: &#x60;./drivers.component.html&#x60;,
+  styleUrls: [&#x60;./drivers.component.css&#x60;]
+})
+export class DriversComponent implements OnInit, OnDestroy {
+  /**
+   * @ignore
+   */
+  selectYear: string;
+  /**
+   * @ignore
+   */
+  driversList: Driver[];
+  /**
+   * @ignore
+   */
+  showInfo: boolean;
+  constructor(
+    private selectPageService: SharedService,
+    private _driversService: DriversService,
+    private _alertService: AlertService
+  ) {}
+  /**
+   * @ignore
+   */
+  ngOnInit() {
+    this.showInfo &#x3D; false;
+    this.selectPageService.setSelectPage(&#x60;drivers&#x60;);
+    this.loadDataFromAssets();
+  }
+
+  /**
+   * @ignore
+   */
+  ngOnDestroy(): void {
+    this.showInfo &#x3D; false;
+    this.driversList &#x3D; [];
+  }
+
+  /**
+   * Function to show / hide loading data loading.
+   * @example
+   * This is a good example to show loading data dialog
+   * loadDataDialog(true)
+   *
+   * @param open Value to specify if open load data dialog
+   */
+  private loadDataDialog(open: boolean &#x3D; true) {
+    if (open) {
+      this._alertService.loadData(
+        &#x60;Load ${this.selectYear} season drivers!!&#x60;,
+        &#x60;Wait a moment please!!&#x60;
+      );
+    } else {
+      this._alertService.closeAlert();
+    }
+  }
+
+  /**
+   * Take data from server. More info in:
+   *  [Drivers List API Documentation]{@link https://ergast.com/mrd/methods/drivers/}
+   *
+   * @example
+   * This is a good example to show 2018 drivers list
+   * selectYearDrivers(2018)
+   *
+   * @param {string} year  Select year value
+   */
+  selectYearDrivers(year: string &#x3D; String(new Date().getFullYear())) {
+    this.selectYear &#x3D; year;
+    this.loadDataDialog();
+    this._driversService.listByYear(year).subscribe(
+      (data: Driver[]) &#x3D;&gt; {
+        this.selectPageService.setSelectPage(
+          &#x60;Drivers List to  ${this.selectYear} season&#x60;
+        );
+        this.driversList &#x3D; data;
+        this.showInfo &#x3D; true;
+        this._alertService.closeAlert();
+      },
+      _errorService &#x3D;&gt; {
+        this.loadDataFromAssets();
+      }
+    );
+  }
+
+  /**
+   * Take data from a local file in json format
+   */
+  protected loadDataFromAssets() {
+    this.selectYear &#x3D; &#x60;2018&#x60;;
+    this.loadDataDialog();
+    this._driversService.loadListFromLocal().subscribe((data: Driver[]) &#x3D;&gt; {
+      console.log(data);
+      this.showInfo &#x3D; true;
+      this.driversList &#x3D; data;
+      this.loadDataDialog(false);
+    });
+  }
+
+  /**
+   * @param {Driver} driver  Select driver object
+   * @returns
+   */
+  infoAlert(driver: Driver) {
+    swal({
+      title: &#x60;&lt;br/&gt;&lt;strong&gt; ${driver.givenName} ${driver.familyName} &lt;/strong&gt;&#x60;,
+      html: &#x60;&#x60;,
+      showCloseButton: false,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: &#x60;Close&#x60;,
+      confirmButtonAriaLabel: &#x60;Thumbs up, great!&#x60;,
+      cancelButtonText: &#x60;&lt;i class&#x3D;&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&#x60;,
+      cancelButtonAriaLabel: &#x60;Thumbs down&#x60;
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!--&lt;div class&#x3D;&quot;card mb-3 animated fadeIn&quot; *ngIf&#x3D;&quot;showInfo&quot;&gt;
+&lt;div class&#x3D;&quot;card-header&quot;&gt;
+    &lt;i class&#x3D;&quot;fa fa-table&quot;&gt;&lt;/i&gt; Drivers List to {{ selectYear }} season
+  &lt;/div&gt;--&gt;
+  &lt;!--&lt;div class&#x3D;&quot;card-body table-responsive&quot;&gt;
+    &lt;table class&#x3D;&quot;table table-striped table-bordered&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th scope&#x3D;&quot;col&quot; colspan&#x3D;&quot;2&quot;&gt;Driver&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;Date of Birth&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;Nationality&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;More info&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;ng-template ngFor let-driver [ngForOf]&#x3D;&quot;driversList&quot; let-i&#x3D;&quot;index&quot;&gt;
+          &lt;tr class&#x3D;&quot;animated fadeIn&quot;&gt;
+            &lt;td&gt;&lt;strong&gt;#{{ driver.permanentNumber }} &lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;
+              &lt;img class&#x3D;&quot;profile-photo&quot; src&#x3D;&quot;https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png&quot; 
+              default&#x3D;&quot;https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png&quot;/&gt;
+              {{driver.givenName}} {{driver.familyName}}  
+            &lt;/td&gt;
+            &lt;td align&#x3D;&quot;center&quot;&gt;{{driver.dateOfBirth}}&lt;/td&gt;
+            &lt;td align&#x3D;&quot;center&quot;&gt;
+              &lt;img src&#x3D;&quot;https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png&quot; default&#x3D;&quot;../../../assets/img/Unknown.png&quot;
+              /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;a href&#x3D;&quot;{{driver.url}}&quot; title&#x3D;&quot;Web browser version&quot;&gt;
+                &lt;img src&#x3D;&quot;../../../assets/internet.png&quot; /&gt;
+              &lt;/a&gt;
+              &lt;a href&#x3D;&quot;{{driver.url | wikipediaUrlMobile}}&quot; title&#x3D;&quot;Mobile version&quot;&gt;
+              &lt;img src&#x3D;&quot;../../../assets/mobile.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/ng-template&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;card-footer small text-muted&quot;&gt;Updated yesterday at 11:59 PM&lt;/div&gt;
+&lt;/div&gt;--&gt;
+
+&lt;div class&#x3D;&quot;card-columns animated fadeIn&quot;&gt;
+  &lt;ng-template ngFor let-driver [ngForOf]&#x3D;&quot;driversList&quot; let-i&#x3D;&quot;index&quot;&gt;
+    &lt;div class&#x3D;&quot;card&quot; (click)&#x3D;&quot;infoAlert(driver)&quot;&gt;
+      &lt;div class&#x3D;&quot;card-body&quot; &gt;
+        &lt;img class&#x3D;&quot;profile-photo&quot; src&#x3D;&quot;https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png&quot; default&#x3D;&quot;https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png&quot;
+        /&gt;&amp;nbsp;
+        &lt;img src&#x3D;&quot;https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png&quot; default&#x3D;&quot;../../../assets/img/Unknown.png&quot;
+        /&gt;&amp;nbsp;&lt;strong&gt;#{{ driver.permanentNumber }} &lt;/strong&gt;
+        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{driver.givenName}} {{driver.familyName}}&lt;/h5&gt;
+        &lt;p class&#x3D;&quot;card-text&quot;&gt;
+          &lt;span&gt;{{driver.dateOfBirth}}&lt;/span&gt;&lt;br/&gt;
+          &lt;a href&#x3D;&quot;{{driver.url}}&quot; title&#x3D;&quot;Web browser version&quot; target&#x3D;&quot;_blank&quot;&gt;
+            &lt;img src&#x3D;&quot;../../../assets/internet.png&quot; /&gt;
+          &lt;/a&gt;
+          &lt;a href&#x3D;&quot;{{driver.url | wikipediaUrlMobile}}&quot; target&#x3D;&quot;_blank&quot; title&#x3D;&quot;Mobile version&quot;&gt;
+            &lt;img src&#x3D;&quot;../../../assets/mobile.png&quot; /&gt;
+          &lt;/a&gt;
+        &lt;/p&gt;
+        &lt;!--&lt;p class&#x3D;&quot;card-text&quot;&gt;
+          &lt;small class&#x3D;&quot;text-muted&quot;&gt;Last updated 3 mins ago&lt;/small&gt;
+        &lt;/p&gt;--&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./drivers.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.profile-photo {
+    max-width: 40px !important;
+}
+
+.card {
+    cursor: pointer;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--<div class="card mb-3 animated fadeIn" *ngIf="showInfo"><div class="card-header">    <i class="fa fa-table"></i> Drivers List to {{ selectYear }} season  </div>-->  <!--<div class="card-body table-responsive">    <table class="table table-striped table-bordered">      <thead>        <tr>          <th scope="col" colspan="2">Driver</th>          <th scope="col">Date of Birth</th>          <th scope="col">Nationality</th>          <th scope="col">More info</th>        </tr>      </thead>      <tbody>        <ng-template ngFor let-driver [ngForOf]="driversList" let-i="index">          <tr class="animated fadeIn">            <td><strong>#{{ driver.permanentNumber }} </strong></td>            <td>              <img class="profile-photo" src="https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png"               default="https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png"/>              {{driver.givenName}} {{driver.familyName}}              </td>            <td align="center">{{driver.dateOfBirth}}</td>            <td align="center">              <img src="https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png" default="../../../assets/img/Unknown.png"              />            </td>            <td>              <a href="{{driver.url}}" title="Web browser version">                <img src="../../../assets/internet.png" />              </a>              <a href="{{driver.url | wikipediaUrlMobile}}" title="Mobile version">              <img src="../../../assets/mobile.png" />              </a>            </td>          </tr>        </ng-template>      </tbody>    </table>  </div>  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div></div>--><div class="card-columns animated fadeIn">  <ng-template ngFor let-driver [ngForOf]="driversList" let-i="index">    <div class="card" (click)="infoAlert(driver)">      <div class="card-body" >        <img class="profile-photo" src="https://mugan86.com/amugika/img/f1/drivers/{{driver.driverId}}.png" default="https://raw.githubusercontent.com/mugan86/udemy-0-to-expert-angular/master/04_spotifyApp/src/assets/img/noimage.png"        />&nbsp;        <img src="https://mugan86.com/amugika/img/f1/flags/small/{{driver.nationality}}.png" default="../../../assets/img/Unknown.png"        />&nbsp;<strong>#{{ driver.permanentNumber }} </strong>        <h5 class="card-title">{{driver.givenName}} {{driver.familyName}}</h5>        <p class="card-text">          <span>{{driver.dateOfBirth}}</span><br/>          <a href="{{driver.url}}" title="Web browser version" target="_blank">            <img src="../../../assets/internet.png" />          </a>          <a href="{{driver.url | wikipediaUrlMobile}}" target="_blank" title="Mobile version">            <img src="../../../assets/mobile.png" />          </a>        </p>        <!--<p class="card-text">          <small class="text-muted">Last updated 3 mins ago</small>        </p>-->      </div>    </div>  </ng-template></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ChartComponent', 'selector': 'app-chart'},{'name': 'CircuitsComponent', 'selector': 'app-circuits'},{'name': 'DoughnutChartComponent', 'selector': 'app-doughnut-chart'},{'name': 'DriversComponent', 'selector': 'app-drivers'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'GoogleMapsComponent', 'selector': 'app-google-maps'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LineChartComponent', 'selector': 'app-line-chart'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotpagefoundComponent', 'selector': 'app-notpagefound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'PieChartComponent', 'selector': 'app-pie-chart'},{'name': 'PolarAreaChartComponent', 'selector': 'app-polar-area-chart'},{'name': 'RacesComponent', 'selector': 'app-races'},{'name': 'RadarChartComponent', 'selector': 'app-radar-chart'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScrollTopComponent', 'selector': 'app-scroll-top'},{'name': 'SeasonsComponent', 'selector': 'app-seasons'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SupportComponent', 'selector': 'app-support'}];
+    var DIRECTIVES = [{'name': 'DefaultImageDirective', 'selector': 'img[default]'}];
+    var ACTUAL_COMPONENT = {'name': 'DriversComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DriversComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

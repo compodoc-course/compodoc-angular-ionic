@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+/**
+ * Convert input text with capitalize text
+ */
 @Pipe({
   name: 'capitalize'
 })
