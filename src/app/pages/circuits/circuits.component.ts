@@ -8,27 +8,49 @@ import { GoogleStaticMapUrlPipe } from '../../pipes/google-static-map-url.pipe';
 import { LocationTextPipe } from '../../pipes/location-text.pipe';
 import { GoogleMapsUrlPipe } from '../../pipes/google-maps-url.pipe';
 
+/**
+ * Manage circuit info
+ */
 @Component({
   selector: 'app-circuits',
   templateUrl: './circuits.component.html',
   styleUrls: ['./circuits.component.css']
 })
 export class CircuitsComponent implements OnInit {
+  /**
+   * @ignore
+   */
   showInfo: boolean;
+  /**
+   * @ignore
+   */
   selectYear: string;
+  /**
+   * @ignore
+   */
   circuitsList: Circuit[];
+  /**
+   * @ignore
+   */
   constructor(
     private selectPageService: SharedService,
     private _alertService: AlertService,
     private _circuitService: CircuitsService
-  ) {}
+  ) { }
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
     this.showInfo = false;
     this.selectPageService.setSelectPage('circuits');
     this.loadDataFromAssets();
   }
 
+  /**
+   * Comment
+   * @param open Open dialog or no
+   */
   private loadDataDialog(open: boolean = true) {
     if (open) {
       this._alertService.loadData(
@@ -40,6 +62,10 @@ export class CircuitsComponent implements OnInit {
     }
   }
 
+  /**
+   * Take circuis by select year
+   * @param year select year circuits data obtain
+   */
   selectYearCircuits(year: string = String(new Date().getFullYear())) {
     this.selectYear = year;
     this.loadDataDialog();
@@ -52,7 +78,7 @@ export class CircuitsComponent implements OnInit {
         this.showInfo = true;
         this._alertService.closeAlert();
       },
-      _errorService => {}
+      _errorService => { }
     );
   }
 
@@ -72,6 +98,10 @@ export class CircuitsComponent implements OnInit {
       });
   }
 
+  /**
+   * Una frase
+   * @param circuit select circuit
+   */
   infoAlert(circuit: Circuit) {
 
     const googleStaticMapUrl = new GoogleStaticMapUrlPipe().transform(circuit.Location, `h`, `red`, `C`, 1000, 300, 5);

@@ -1,5 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * Round input value to select precision
+ */
 @Pipe({
   name: 'round'
 })

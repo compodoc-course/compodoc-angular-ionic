@@ -21,7 +21,8 @@
     "compodoc-stripe": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output src/docs/stripe --serve --open --theme stripe",
     "compodoc-plus": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output src/docs --serve --open --includes src/aditional-docs --includesName \"Acerca del proyecto\"",
     "compodoc-favicon-title": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output src/docs --serve --open --includes src/aditional-docs --customFavicon src/favicon.ico -n \"Angular Compodoc Course\"",
-    "compodoc-no-compo-logo-personal": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output src/docs/personal-theme --serve --open --includes src/aditional-docs --customFavicon src/favicon.ico -n \"Angular Compodoc Course\" --hideGenerator -y src/custom-styles"
+    "compodoc-no-compo-logo-personal": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output src/docs/personal-theme --serve --open --includes src/aditional-docs --customFavicon src/favicon.ico -n \"Angular Compodoc Course\" --hideGenerator -y src/custom-styles",
+    "documentation-coverage": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output src/docs --serve --open --watch --includes src/aditional-docs --includesName \"Acerca del proyecto\""
   },
   "private": true,
   "dependencies": {

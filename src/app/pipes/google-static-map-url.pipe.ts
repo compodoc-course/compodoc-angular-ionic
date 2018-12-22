@@ -2,6 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Location } from '../interfaces/location.interface';
 import { GOOGLEMAPS } from '../../environments/api-keys';
 
+/**
+ * Obtain Google Static Map Url image
+ */
 @Pipe({
   name: `googleStaticMapUrl`
 })

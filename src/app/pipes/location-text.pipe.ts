@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Location } from '../interfaces/location.interface';
 
+/**
+ * Add location with name of city and country
+ */
 @Pipe({
   name: 'locationText'
 })
